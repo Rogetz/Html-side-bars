@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Element Removal</title>
+</head>
+<body>
+<div class="wrapper"></div>
+<script>
+    var wrapper = document.querySelector(".wrapper");
+    for(let i = 0; i <= 5; i++){
+        var newParagraph = document.createElement("p");
+        newParagraph.innerHTML += "I am the new element inside here."
+        wrapper.appendChild(newParagraph);
+    }
+    // when removing a child node use the variable name to remove it in js and not the tag name created in the htmlp part.
+    // not with the tag name in its html part.
+    // also take keen note that both this method and the last one remove only one element. So if you want it to remove a couple, probably use a loop.
+    //wrapper.removeChild(newParagraph);
+    // removes only one item. but also works with tags and thats great. There's therefore a better implementation of it down there where there's a loop.
+    newParagraph.remove();    
+
+
+    // testing for whether you can select a javascript created element in javascript as if it was created in html.
+    // found out you can actually access it as any other element. however remember for apendingChild and removing child we use the variable names.
+    var paragraphList = document.querySelectorAll(".wrapper p");
+    // I can also test for availability of something selected by the paragraghList querySelector.
+    if(paragraphList){
+        alert("paragragh list tested for values");
+    }
+    // the loop for all the paragraghList type of items.
+    paragraphList.forEach(function(e,key){
+        e.remove();
+    });
+
+</script>    
+</body>
+</html>

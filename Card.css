@@ -1,0 +1,52 @@
+
+.card{
+    border-radius: 1rem;
+    width: 18rem;
+    height: 22rem;
+    padding: 1rem;
+    background-color: rgba(0,25,255,1);
+    position: relative;
+    box-shadow: 1rem 1rem 1.2rem rgba(0,0,255,0.5);
+
+}
+.card-div-image{
+    width: 15rem;
+    height: 13rem;
+    margin: auto;
+}
+.card-div-image-description{
+    color: rgba(250,0,150,0.9);
+}
+.card-div-title{
+    color: rgba(0,0,0,0.9);
+    font-weight: bold;
+    display: flex;
+    padding: 1rem;
+    margin-left: 3.5rem;
+
+}
+.card-div-amount{
+    color: rgba(0,255,50,1);
+    font-size: larger;
+    border-bottom: 0.2rem solid black;
+    margin-left: 0.5rem;
+}
+.card-div-functionality{
+    text-decoration: none;
+    background-color: rgba(0,50,255,0.9);
+    color: white;
+    font-weight: bold;
+    padding: 0.5rem;
+    margin-left: 7rem;
+    border-radius: 10%;
+    bottom: 1.8rem;
+    /* add the position attribute to it to enable the top, bottom features work.
+    to mean you add position attributes to the parent too.*/
+    position: absolute;
+}
+hr{
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-top: 1rem;
+    margin-bottom: 0.3rem;
+}

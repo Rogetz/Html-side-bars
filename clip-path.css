@@ -1,0 +1,28 @@
+body{
+    padding: 0;
+    margin: 0;
+}
+img{
+    /*This relative height and width to the containing div*/
+    max-width: 100%;
+    max-height: 100%;
+    /*object fit does nothing 
+    object-fit: cover;
+    */
+}
+
+.image-test{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    height: 80vh;
+    /*This percentages are simply coordinates for edges to be placed in
+    the first is x-axis, the second is y-axis. Cool though*/
+    clip-path: polygon(
+        100% 0%,
+        100% 100%,
+        0% 100%,
+        0% 100%
+    );
+}

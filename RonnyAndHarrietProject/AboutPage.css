@@ -1,0 +1,439 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;900&display=swap');
+
+/*The root variables section*/
+:root{
+    /*color variables*/
+    --color-red: rgba(255,0,0,1);
+    --color-alice-blue: aliceblue;
+    --color-yellow-green : rgba(154,205,50,1);
+    --color-blue-violet: rgba(138,43,226,1);
+    --color-white: rgba(255,255,255,1);
+    --color-light: rgba(255,255,255,0.7);
+    --color-dark: rgba(0,0,0,1);
+    --color-light-dark: rgba(0,0,0,0.5);
+    --color-grey: rgba(155,155,155,1);
+    --color-primary: rgba(0,0,255,0.8);
+    --color-danger: rgba(255,70,70,1);
+    --color-blue: rgba(0,0,255,0.8);
+    --color-light-blue: rgba(180,180,255,1);
+    --color-lighter-blue: rgba(220,220,255,1);
+    --color-success: rgba(0,255,0,0.8);
+    --color-light-green: rgba(0,255,0,0.5);
+    --color-green: rgba(0,255,0,1);
+    --color-pink: rgba(255,0,150,1);
+    --color-light-pink: rgba(255,0,150,0.4);
+    --color-purple: rgba(50,0,255,1);
+    --color-light-purple: rgba(50,0,255,0.5);
+    /*padding variales*/
+    --card-padding: 0.5rem;
+    --larger-padding: 2em;
+    /*margin-variables*/
+    --margin-top: 1rem;
+    --margin-bottom: 1rem;
+    --margin-right: 1rem;
+    --margin-left: 1rem;
+    /*border-radius*/
+    --card-border-radius: 1rem;
+    /*logo img sizing */
+    --logo-img-width: 3rem;
+    --logo--img-height: 3rem;
+    /*logo text sizing*/
+    --logo-text-font-size: 1rem;
+    --logo-text-line-height: 1rem;
+    /*button sizing*/
+    --button-width: 2rem;
+    --button-height: 2rem;
+    /*--menu-items*/
+    --menu-item-bottom: 0.3rem;
+    --menu-item-line-height: 1.5rem;
+    --menu-item-radius: 0.2rem;
+    --menu-item-width: 6.5rem;
+    /*transition time*/
+    --fast-smooth-transition: 0.3s;
+    /*text-styling, don't repest colors, only text-muted
+    is valid here.*/
+    --text-muted: rgba(0,0,0,0.6);
+    /*notification bar*/
+    --notification-light: rgba(255,255,255,0.8);
+    --notification-dark: rgba(0,0,0,1);
+}
+
+/*general styling*/
+body{
+    padding: 0;
+    margin: 0;
+    background-color: aliceblue;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+a{
+    text-decoration: none;
+}
+
+/*header */
+header{
+    position: sticky;
+    top: 0;
+    z-index: 8;
+    display: flex;
+    flex-wrap: wrap;
+    /*I'll do the manual media screening for smaller screen sizes, since the flex style hasn't worked here. */
+    justify-content: space-between;
+    align-items: center;
+    backdrop-filter: blur(3rem);
+}
+header .page-title{
+    color: var(--color-green);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+}
+header .page-title span.fa{
+    color: var(--color-blue);
+}
+.l-section{
+    font-size: 1.5rem;
+    display: flex;
+    gap: 1.5rem;
+    margin-right: 2rem;
+    font-weight: bold;
+}
+.l-section hr{
+    display: none;
+    visibility: hidden;
+}
+.l-section a:hover{
+    color: var(--color-green);
+}
+
+.l-section{
+    font-size: 1.5rem;
+    display: flex;
+    padding-left: 2rem;
+    width: 30rem;
+    gap: 1.5rem;
+    margin-right: 0rem;
+    font-weight: bold;
+    border: 0rem;
+}
+.l-section hr{
+    width: 100%;
+}
+.drop-down-div{
+    border: 0rem;
+    right: 0rem;
+}
+.fa-bars{
+    cursor: pointer;
+    font-size: 3.5rem;
+    position: absolute;
+    color: var(--color-blue);
+    right: 0.3rem;
+    top: 0rem;
+    display: none;
+    visibility: hidden;
+}
+.fa-close{
+    cursor: pointer;
+    font-size: 2.5rem;
+    color: var(--color-red);
+    z-index: 20;
+    position: fixed;
+    right: 0.3rem;
+    top: 0rem;
+    display: none;
+    visibility: hidden;
+}
+
+/*search bar */
+.search-bar{
+    width: 30rem;
+    height: 7vh;
+    padding: 0rem 0rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-white);
+    border-radius: 2rem;
+    column-gap: 0.5rem;
+    border: 0.15rem solid var(--color-dark);
+}
+.search-input{
+    width:88%;
+    height: 100%;
+    background-color: transparent;
+    border: 0;
+    outline: none;
+    font-weight: bold;
+    color: var(--color-black);
+    font-size: 1rem;
+}
+.search-input::placeholder{
+    font-size: 1.3rem;
+    color: var(--color-blue);
+    font-weight: bold;
+    text-align: center;
+}
+/*The button for searhing as well as you can press enter to search anything. */
+.search-bar button{
+    outline: none;
+    width: 10%;
+    height: 100%;
+    border: 0;
+    margin-left: -1rem;
+    border-radius: 1rem;
+    background-color: transparent;
+}
+.fa-magnifying-glass{
+    font-size: 1.7rem;
+    border: 0;
+}
+
+/*media screen for the small screen devices*/
+@media screen and (max-width : 991px){
+    .l-section{
+        display: none;
+        visibility: hidden;
+        background-color: var(--color-dark);
+        flex-direction: column;
+        position: fixed;
+        top: 0rem;
+        right: 0rem;
+        width: 10rem;
+        height: 100vh;
+        align-items: center;
+        padding-top: 6rem;
+        padding-left: 0;
+        border: 0.2rem solid black;
+        z-index: 18;
+    }
+    .l-section hr{
+        display: block;
+        visibility: visible;
+    }
+    .fa-bars{
+        display: inline;
+        visibility: visible;
+    }
+    .search-section{
+        margin-right: 3rem;
+        width: 100%;
+        margin: auto;
+    }  
+    .search-bar{
+        width: 100%;
+        padding: 0.25rem 0rem;
+        column-gap: 0.5rem;
+    }
+
+}
+.l-section.active{
+    display: flex;
+    visibility: visible;
+}
+.fa.active{
+    display: block;
+    visibility: visible;
+}
+
+
+/*logo section*/
+.logo-section{
+    width: 15rem;
+    height: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 5%;
+    gap: 1rem;
+}
+.logo{
+    clip-path: circle(
+        100% at 0% 50%
+    );
+}
+.logo-name{
+    color: var(--color-blue-violet);
+    font-weight: bolder;
+    font-size: 2rem;
+}
+.first-title{
+    color: var(--color-blue);
+    font-weight: bolder;
+}
+
+body >h1{
+    color: var(--color-blue);
+    text-align: center;
+    position: relative;
+    top: 0.1rem;
+}
+.main-section{
+    display: flex;
+    flex-wrap: wrap;
+    width: 80%;
+    min-height:100vh;
+    /*align-items: center;*/
+    justify-content: center;
+    margin: auto;
+    text-align: center;
+    box-sizing: border-box;
+    padding-top: 2rem; 
+    column-gap: 1rem;
+    row-gap: 2.5rem;
+    margin-bottom: 3rem;
+}
+
+.main-section .about-template{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 20rem;
+    height: 20rem;
+    background-color: white;
+    color: var(--color-blue);
+    font-size: 1.5rem;
+    font-weight: bold;
+    box-sizing: border-box;
+    box-shadow: 0.2rem 0.2rem 0.2rem blue;
+}
+.main-section .about-template h3{
+    width: 100%;
+    height: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background-color: var(--color-blue);
+    margin-top: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+}
+.main-section .about-template span.fa{
+    margin-top: 0.1rem;
+    color: var(--color-green);
+    font-size: 7rem;
+    width: 7rem;
+    height: 7rem;
+    border-radius: 3.5rem;
+    background-color: var(--color-light-blue);
+    box-shadow: 0.1rem 0.1rem 0.5rem var(--color-blue);
+}
+.main-section .about-template p{
+    margin-top: 0.1rem;
+    font-size: 1.2rem;
+    text-align: left;
+    padding-left: 1rem;
+    color: var(--color-dark);
+    font-family: 'Roboto', sans-serif;
+}
+.about-template .bottom-section{
+    width: 100%;
+    height: 2.2rem;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+.about-template hr{
+    width: 90%;
+    border: 0.1rem solid var(--color-pink);
+    margin-bottom: 0;
+}
+.action-button{
+    margin: 0;
+    width: 10rem;
+    height: 2rem;
+    border-radius: 1rem;
+    color: var(--color-pink);
+    background-color: var(--color-white);
+    box-shadow: 0.1rem 0.1rem 0.1rem var(--color-blue);
+}
+.action-button:hover{
+    color: white;
+    background-color: black;
+}
+.about-template .bottom-section span.fa{
+    padding-left: 1rem;
+    box-sizing: border-box;
+    display: flex;
+    object-fit: cover;
+    align-items: center;
+    font-size: 3.5rem;
+    width: 7rem;
+    height: 3rem;
+    border-radius: 0;
+    border: none;
+    background-color: transparent;
+    color: blue;
+    box-shadow: none;
+    margin-top: 0;
+    transition: all 0.3s;
+}
+.about-template .bottom-section span.fa:hover{
+    padding-left: 3rem;
+}
+
+
+/*second child*/
+.main-section .about-template:nth-child(2) h3{
+    color: white; 
+    background-color: var(--color-dark);
+}
+.main-section .about-template:nth-child(2) span.fa{
+    color: var(--color-blue);
+    background-color: transparent;
+    box-shadow: none;
+}
+.about-template:nth-child(2) p{
+    color: blue;
+}
+.about-template:nth-child(2) hr{
+    border: 0.1rem solid var(--color-dark);
+}
+.about-template:nth-child(2) .action-button{
+    color: var(--color-blue);
+    background-color: var(--color-white);
+    box-shadow: 0.1rem 0.1rem 0.1rem var(--color-blue);
+}
+.about-template:nth-child(2) .action-button:hover{
+    color: white;
+    background-color: blue;
+}
+.about-template:nth-child(2) .bottom-section span.fa{
+    color: teal;
+    box-shadow: none;
+}
+
+
+/*Third child*/
+.main-section .about-template:nth-child(3) h3{
+    color: white;
+    background-color: var(--color-green);
+}
+.main-section .about-template:nth-child(3) span.fa{
+    color: var(--color-green);
+    background-color: transparent;
+    box-shadow: none;
+}
+.about-template:nth-child(3) p{
+    color: green;
+}
+.about-template:nth-child(3) hr{
+    border: 0.1rem solid var(--color-blue);
+}
+.about-template:nth-child(3) .action-button{
+    color: var(--color-white);
+    background-color: var(--color-green);
+    box-shadow: 0.1rem 0.1rem 0.1rem var(--color-blue);
+}
+.about-template:nth-child(3) .action-button:hover{
+    color: var(--color-lighter-blue);
+    background-color: var(--color-blue-violet);
+}
+.about-template:nth-child(3) .bottom-section span.fa{
+    color: purple;
+    box-shadow: none;
+    background-color: transparent;
+}

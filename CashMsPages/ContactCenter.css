@@ -55,66 +55,154 @@
 
 body{
     font-family: 'Roboto', sans-serif;
-    background-color: var(--color-white);
+    background-color: var(--color-light);
     padding: 0;
     margin: 0;
     width: 98vw;
     min-height: 100vh;
-    overflow: hidden;
+    overflow-x: hidden;
 }
+.logo{
+    /*modification on the width to alow easy alignment.*/
+    width: 33%;
+    height: 4rem;
+    display: flex;
+    /*margin-bottom: 0.5rem;*/
+    margin-left: 0.7rem;
+}
+.logo-img{
+    width: var(--logo-img-width);
+    height: var(--logo--img-height);
+    /*translate has been really instrumental here.*/
+}
+.logo-text{
+    color: rgba(255,255,255,0.8);
+    font-size: x-large;
+    font-weight: bolder;
+    background-color: rgba(20,0,255);
+    border-bottom-right-radius: 0.3rem;
+    border-top-right-radius: 0.3rem;
+    line-height: 2em;
+    height: 2em;
+}
+.logo-extension{
+    color: rgba(255,20,180,0.8);
+}
+.contact-title-div{
+    display: flex;
+    justify-content: center;
+}
+
+
 .Social-Media-Info{
     position: relative;
     display: flex;
     bottom: 0;
 }
 .contact-header{
+    position: relative;
+    left: 33%;
     text-align: center;
-    margin: auto;
     color: var(--color-light-purple);
     font-weight: bold;
+    background-color: var(--color-light-blue);
+    padding: 2rem 2rem;
+    width: 30rem;
+    box-sizing: border-box;
+    box-shadow: 0.3rem 0.3rem 0.2rem var(--color-blue);
 }
 .contact-title{
     font-weight: bold;
     font-size: xx-large;
-    color: rgba(255,20,100);
+    color: rgba(255,0,255);
+    padding: 0rem 0rem;
+}
+.contact-detail{
+    color: rgba(0,20,100);
+}
+.contact-header .fa{
+    font-size: x-large;   
+    padding: 0rem 0.2rem; 
+}
+/*Note that we use a space between classes
+for children, while we join the classes together for classes in 
+one tag*/
+
+hr{
+    margin: 0.2rem 1rem;
 }
 .Image-And-Description{
     position: relative;
     display: flex;
     background-color: var(--color-blue);
-    margin: 3rem 0rem;
     width: 60%;
     height: 60vh;
     border-radius: 0.3rem;
     margin: 3rem 0rem;
     box-shadow: 0.3rem 0.3rem 0.2rem var(--color-blue);
+    background-color: rgba(220,220,255);
 }
+
 .Image-And-Description-holder{
     position: relative;
     left: 20%;
 }
 .Image-holder{
     width: 50%;
-    height: 59vh;
+    height: 59.8vh;
     border-radius: 0.3rem;  
     box-shadow: 0.3rem 0.3rem 0.2rem var(--color-blue);
 }
 p{
     padding: 0rem 2rem;
+    margin: 0rem 0rem;
     line-height: 2.5rem;
-
 }
 .Image-And-Description p{
-    font-weight: 800;
+    font-weight: 500;
     font-size: large;
+    font-family: 'Times New Roman', Times, serif;
 }
-.Image-Title{
+/*.Image-Title{
+    font-family:Verdana, Tahoma, sans-serif;
     text-align: center;
-    font-weight: bold;
-    font-size: x-large;
-    color: white;
-}
-.Image-Title-Two{
-    font-weight: bolder;
+    font-weight:bolder;
     font-size: xx-large;
+    margin-top: 2rem;
+}*/
+/*sometimes you have to refer to an element with two selectors
+in order to override the default general behaviour
+defined in the larger box.*/
+p.Image-Title{
+    font-family:Verdana, Tahoma, sans-serif;
+    text-align: center;
+    font-weight:bolder;
+    font-size: x-large;
+    margin-top: 2rem;   
+}
+p.Image-Title-Two{
+    font-weight: bolder;
+    font-size: larger;
+    color: var(--color-white);
+}
+.Image-Text{
+    left: 20;
+}
+.image-text-button{
+    position: relative;
+    width: 10rem;
+    height: 3rem;
+    font-size: large;
+    font-weight: bold;
+    color: var(--color-white);
+    background-color: var(--color-blue);
+    border-radius: 1rem;
+    left: 5rem;
+    margin: 2rem 0rem;
+    box-shadow: 0.2rem 0.2rem 0.1rem var(--color-light-dark);
+}
+.image-text-button:hover{
+    background-color: var(--color-lighter-blue);
+    color: var(--color-dark);
+    box-shadow: 0.3rem 0.3rem 0.3rem var(--color-blue);
 }

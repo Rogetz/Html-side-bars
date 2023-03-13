@@ -1,0 +1,195 @@
+
+/*general styling*/
+*{
+    text-decoration: none;
+    box-sizing: border-box;
+}
+body{
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/*header section*/
+header{
+    width: 100%;
+    height: 5rem;
+    border: none;
+    border-bottom: 0.2rem solid blue;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: sticky;
+    top: 0rem;
+    box-sizing: border-box;
+    margin-bottom: 1rem;
+    background-color: black;
+    color: white;
+}
+header h1{
+    line-height: 0.2rem;
+}
+header h2{
+    line-height: 0.2rem;
+    color: blue;   
+}
+header #text1{
+    color: pink;
+
+}
+header #text2{
+    color: blue;
+}
+
+/*main section*/
+main{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    font-weight: 500;
+    font-size: 1.5rem;
+}
+main h1{
+    text-align: center;
+    border-bottom: 0.2rem solid black;
+}
+@media screen and (max-width : 768px){
+    main{
+        width: 98%;
+    }
+}
+
+/*Intro section*/
+.Intro-section h1{
+    color: purple;
+}
+
+/*Primary services*/
+.primary-services{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+@media screen and (max-width : 768px){
+    .primary-services h1{
+        font-size: 2rem;
+    } 
+    header{
+        height: auto;
+    }  
+    header h1{
+        line-height: 1.2rem;
+    } 
+}
+.primary-services h1{
+
+}
+.primary-services .social-div .fa-check-circle{
+    color: blue;
+}
+.primary-services .social-div .Facebook-title{
+    color: blue;
+}
+.primary-services .social-div .Instagram-title{
+    color: chocolate;
+}
+.primary-services .social-div .Twitter-title{
+    color:dodgerblue;
+}
+.primary-services .social-div .Youtube-title{
+    color: red;
+}
+.primary-services .social-div:nth-of-type(even){
+    align-self: flex-start;
+}
+.primary-services .social-div{
+    font-weight: 500;
+    width: 35rem;
+    padding: 0.5rem;
+    height: auto;
+    border: 0.2rem solid white;
+    box-shadow: 0.2rem 0.2rem 0.2rem black;
+    border-radius: 1rem;
+    margin: 1rem;
+}
+.primary-services .social-div .social-body p{
+    display: flex;
+    column-gap: 0.5rem;
+}
+
+@media screen and (max-width : 991px){
+    .primary-services .social-div{
+        width: 96%;
+    }
+}
+.primary-services .social-div h2{
+    color: blue; 
+    text-align: center;   
+}
+.primary-services h1{
+    color: blueviolet;
+    text-align: center;
+}
+
+/*process flow section*/
+.process-flow-wrapper h2{
+    color: purple;
+    text-align: center;
+}
+.process-flow-div{
+    background-color: blue;
+    color: white;
+    padding: 1rem 0.3rem;
+    margin: 1rem 0rem;
+    border-radius: 0.5rem;
+    box-shadow: 0.2rem 0.2rem 0.2rem black;
+    text-align: center;
+}
+.process-flow-div:nth-of-type(even){
+    padding: 1rem 0.3rem;
+    color: white;
+    background-color: black;
+    box-shadow: 0.2rem 0.2rem 0.2rem blue;
+}
+.process-flow-div:nth-of-type(even) h1{
+    color: blue;
+    border-bottom: 0.2rem solid purple;
+}
+.process-flow-div h1{
+    color: black;
+    text-align: center;
+    font-size: 1.5rem;
+    border-bottom: 0.2rem solid black;
+}
+
+/* consultation div*/
+.consultation-div{
+    width: 100%;
+    height: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+.consultation-div .contact-button{
+    width: 10rem;
+    border-radius: 2rem;
+    height: 3rem;
+    border: 0.15rem solid rgba(255,50,255);
+    transition: all 1s;
+    font-weight: bold;
+    font-size: 1rem;
+}
+.consultation-div .contact-button:hover{
+    background-color: blue;
+    color: white;
+}

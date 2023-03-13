@@ -1,0 +1,499 @@
+:root{
+    /*color variables*/
+    --color-white: rgba(255,255,255,1);
+    --color-light: rgba(255,255,255,0.7);
+    --color-dark: rgba(0,0,0,1);
+    --color-yellow: rgba(255,255,0);
+    --color-light-dark: rgba(0,0,0,0.5);
+    --color-grey: rgba(155,155,155,1);
+    --color-primary: rgba(0,0,255,0.1);
+    --color-danger: rgba(255,70,70,1);
+    --color-blue: rgba(0,0,255,1);
+    --color-light-blue: rgba(150,150,255,0.5);
+    --color-success: rgba(0,255,0,0.8);
+    --color-light-green: rgba(0,255,0,0.5);
+    --color-green: rgba(0,255,0,1);
+    --color-pink: rgba(255,0,150,1);
+    --color-light-pink: rgba(255,0,150,0.4);
+    --color-purple: rgba(50,0,255,1);
+    --color-light-purple: rgba(50,0,255,1);
+    /*padding variales*/
+    --card-padding: 0.5rem;
+    --larger-padding: 2em;
+    /*margin-variables*/
+    --margin-top: 1rem;
+    --margin-bottom: 1rem;
+    --margin-right: 1rem;
+    --margin-left: 1rem;
+    /*border-radius*/
+    --card-border-radius: 1rem;
+    /*logo img sizing */
+    --logo-img-width: 3rem;
+    --logo--img-height: 3rem;
+    /*logo text sizing*/
+    --logo-text-font-size: 1rem;
+    --logo-text-line-height: 1rem;
+    /*button sizing*/
+    --button-width: 2rem;
+    --button-height: 2rem;
+    /*--menu-items*/
+    --menu-item-bottom: 0.3rem;
+    --menu-item-line-height: 1.5rem;
+    --menu-item-radius: 0.2rem;
+    --menu-item-width: 6.5rem;
+    /*transition time*/
+    --fast-smooth-transition: 0.3s;
+    /*text-styling, don't repest colors, only text-muted
+    is valid here.*/
+    --text-muted: rgba(0,0,0,0.6);
+    /*notification bar*/
+    --notification-light: rgba(255,255,255,0.8);
+    --notification-dark: rgba(0,0,0,1);
+}
+/* the star symbol is instrumental in setting the default properties for all elements.*/
+/**{
+    overflow: hidden;
+}However am not using it here.*/
+body{
+    padding: 0;
+    padding: 5rem 0rem;
+    margin: 0;
+    width: 100%;
+    height: auto;
+    background-color: var(--color-grey);
+    display: grid;
+    grid-template-columns: auto;
+    row-gap: 1rem;
+}
+.slider-div{
+    width: 100%;
+    height: 100vh;
+    background-color: var(--color-blue);
+}
+/*main-dishes outsideheader */
+.main-dishes-header{
+    background-color: transparent;
+    margin-bottom: 0;
+    padding-bottom: 0;
+    text-align: center;
+    line-height: 0.2rem;
+}
+.dishes-title{
+    font-weight: bolder;
+    font-size: large;
+    color: var(--color-purple);
+    line-height: 0.2rem;
+}
+.dishes-popular{
+    color: var(--color-pink);
+    font-weight: bolder;
+    font-size: xx-large;
+    line-height: 0.5rem;
+}
+/* ---End----*/
+
+/*---Main Dishes--*/
+.main-dishes{
+    position: relative;
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(20rem,1fr));
+    box-sizing: border-box;
+    row-gap: 1rem;
+    column-gap: 1rem;
+    padding: 1rem 3rem;
+    background-color: var(--color-grey);
+}
+.single-dish{
+    position: relative;
+    width: 80%;
+    height: 30rem;
+    display: flex;
+    /*line height can also reduce the height of lines of text in a div. */
+    line-height: 0.2rem;
+    row-gap: 0.2rem;
+    flex-direction: column;
+    overflow: hidden;
+    background-color: var(--color-white);
+    border-radius: 0.5rem;
+    box-sizing: border-box;
+    box-shadow: 0.3rem 0.3rem 0.3rem var(--color-blue);
+    transition: all 1s;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+/*.single-dish:hover .dish-actual-img{
+    width: 16rem;
+}*/
+.single-dish:hover{
+    background-color: var(--color-light-blue);
+}
+.single-dish:hover .dish-description{
+    background-color: var(--color-white);
+    color: var(--color-blue);
+}
+.single-dish:hover .dish-description .currency{
+    color: var(--color-blue);
+}
+
+
+.dish-img{
+    display: flex;
+    justify-content: center;
+    justify-content: center;
+    flex-direction: row;
+    height: 19rem;
+    box-sizing: border-box;
+    margin: 0rem 0rem;
+    padding-bottom: 0;
+    transition: all 1s;
+}
+.dish-actual-img{
+    width: 100%;
+    height: 19rem;
+    border-radius: 0.3rem;
+    box-shadow: 0.2rem 0.2rem 2rem var(--color-blue);
+    transition: all 1s;
+}
+.single-dish .dish-description{
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    row-gap: 0.3rem;
+    align-items: center;
+    width: 98%;
+    height: 10rem;
+    font-weight: 900;
+    color: var(--color-white);
+    margin-top: 0rem;
+    margin-bottom: 0rem;
+    margin: auto;
+    background-color: var(--color-blue);
+    border-radius: 0.5rem;
+    box-shadow: 0.1rem 0.1rem 0.1rem var(--color-dark);
+}
+.dish-description button{
+    width: fit-content;
+    padding: 0.3rem 0.7rem;
+    font-size: medium;
+    font-weight: bolder;
+    color: var(--color-blue);
+    background-color: var(--color-white);
+    border-radius: 1rem;
+}
+.dish-description .price{
+    width: 100%;
+    height: 2rem;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--color-pink);
+    font-size:larger;
+}
+.dish-description .order-button{
+    background-color: var(--color-blue);
+    color: var(--color-white);
+}
+.dish-description .order-button:hover{
+    background-color: var(--color-white);
+    color: var(--color-blue);
+}
+.dish-description .actual-amount{
+    color: var(--color-green);
+}
+.dish-description .currency{
+    color: var(--color-white);
+}
+.dish-description button:hover{
+    box-shadow: 0.1rem 0.1rem 0.05rem var(--color-purple);
+}
+.dish-textdescription{
+    padding: 0;
+    margin: 0;
+    line-height: 0.1rem;
+    color: var(--color-dark);
+}
+.icon-class{
+    color: var(--color-blue);
+    font-size: 1.5rem;
+    padding: 0.5rem 0.4rem;
+    width: fit-content;
+    height: fit-content;
+    border-radius: 50%;
+    background-color: var(--color-dark);
+    transition: all 1s;
+}
+.single-dish .icon-class{
+    margin-top: -15rem;
+}
+.single-dish:hover .icon-class{
+    margin-top: 1rem;
+}
+.icon-class:hover{
+    background-color: white;
+    color: var(--color-purple);
+}
+.fa-star{
+    color: var(--color-yellow);
+}
+.fa-star-half-alt{
+    color: var(--color-yellow);
+}
+.fa-heart{
+    position: absolute;
+    z-index: 20rem;
+    left: 1rem;
+}
+.fa-eye{
+    position: absolute;
+    z-index: 20rem;
+    right: 1rem;
+}
+
+/*----End--*/
+
+/*Peoples Comments */
+@media screen and (max-width : 991px){
+    .peoples-comments{
+        width: 100%;
+        height: auto;
+        flex-direction: column;
+    }
+    /*quite unfortunate that the peoples comment section isn't working.7                */
+}
+.peoples-comments{
+    position: relative;
+    padding: 1rem 2rem;
+    width: 85%;
+    height: 16rem;
+    display: flex;
+    column-gap: 1rem;
+    row-gap: 2rem;
+    column-gap: 0.5rem;
+    background-color: transparent;
+    margin: auto;
+    border-radius: 0.3rem;
+}
+.single-comment{
+    padding: 0.5rem 1rem;
+    height: auto;
+    color: var(--color-white);
+    display: flex;
+    flex-direction: column;
+    /*when using the flex property for responsive pages, 
+    aboid using percentages.*/
+    flex: 1 1 9rem;
+    border-radius: 0.5rem;
+    background-color: var(--color-dark);
+    margin-bottom: 0rem;
+    box-shadow: 0.3rem 0.3rem 0.3rem var(--color-blue);
+
+}
+.comment-img{
+    width: 5rem;
+    height: 5rem;
+    margin-bottom: 0;  
+    border-radius: 50%;
+    object-fit: cover;  
+}
+.commenter-title{
+    line-height: 0.1rem;
+    padding: 0;
+    height: 0.1rem;
+    margin-bottom: 0;
+    color: var(--color-blue);
+    font-weight: bolder;
+}
+.comment-img-section{
+    width: 100%;
+    height: 33%;
+    padding: 0.2rem 0.2rem;
+    display: flex;
+    margin-bottom: 0;
+}
+.comment-owner-title{
+    display: grid;
+    grid-template-columns: auto auto;
+    row-gap: 0rem;
+    padding: 0rem 0.2rem;
+}
+.commenter-title{
+    font-size: large;
+    font-weight: bold;
+}
+.comment-icons{
+    height: 2rem;
+    margin-top: 0;
+    padding-top: 0;
+}
+
+.comment-body{
+    padding: 0.1rem 0rem;
+    font-size: large;
+    color: var(--color-white);
+    font-weight: bold;
+    margin-top: 0;
+}
+
+/*----End--*/
+
+/*order-form */
+.order-form{
+    padding: 0.5rem 0.5rem;
+    background-color: var(--color-blue);
+    width: 80%;
+    height: 30rem;
+    margin: auto;
+    position: relative;
+    border-radius: 0.5rem;
+    margin-bottom: 2rem;
+    box-shadow: 0.1rem 0.1rem 0.1rem var(--color-white);
+}
+.order-form .form-body{
+    width: 60rem;
+    height: 80rem;
+    display: flex;
+    margin: auto;
+    gap: 0.5rem;
+    padding: 0.1rem 0.5rem;
+}
+@media screen and (max-width : 991px){
+    .order-form{
+        height: auto;
+    }
+    .order-form .form-body{
+        height: auto;
+        /*make height auto for it to accomodate the columns it has.*/
+        flex-direction: column;
+    }
+    .order-form .form-right, .order-form .form-left{
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.order-form .first-title{
+    color: var(--color-green);
+    font-weight: bold;
+    font-size: larger;
+    text-align: center;
+}
+.order-form .second-title{
+    color: var(--color-white);
+    font-weight: bolder;
+    font-size: x-large;
+    text-align: center;
+}
+.order-form .order-input{
+    width: 90%;
+    height: 2rem;
+    padding: 0.1rem 1rem;
+    border-radius: 0.3rem;
+}
+.order-form .order-input::placeholder{
+    font-size: large;
+}
+.order-form .order-text-area{
+    width: 90%;
+    height: 10rem;
+    padding: 0.1rem 1rem;
+    border-radius: 0.3rem;
+}
+.order-form .order-text-area::placeholder{
+    font-size: large;
+}
+/*----End--*/
+
+/*about us*/
+.about-us{
+    position: relative;
+    width: 75%;
+    height: 35rem;
+    margin: auto;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    row-gap: 2rem;
+    padding: 1rem 1rem;
+    box-shadow: 0.2rem 0.2rem 0.1rem var(--color-white);
+    color: var(--color-white);
+    border-radius: 0.5rem;
+}
+@media screen and (max-width : 991px){
+    .about-us{
+        height: auto;
+        width: 100%;
+    }
+    .about-body{
+        height: auto;
+        flex-wrap: wrap;
+    }
+}
+.about-body{
+    display: flex;
+    column-gap: 1rem;
+    font-family:Arial, Helvetica, sans-serif;
+    font-weight: 300;
+    font-size: large;
+}
+.about-us .title-one{
+    font-size: large;
+    line-height: 1rem;
+    font-weight: bold;
+    color: var(--color-green);
+    text-align: center;
+    line-height: 1;
+}
+.about-us .title-two{
+    font-size: larger;
+    font-weight: bolder;
+    color: var(--color-blue);
+    text-align: center;
+}
+.about-description .image-title{
+    color: var(--color-blue);
+    font-size: x-large;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.about-us .image-element{
+    width: 25rem;
+    height: 25rem;
+    box-shadow: 0.3rem 0.3rem 1rem var(--color-blue);
+}
+.action-buttons{
+    display: flex;
+    flex-wrap: wrap;
+}
+.action-buttons button{
+    background-color: var(--color-light-blue);
+    display: flex;
+    flex: 1 1 15rem;
+    justify-content: center;
+    align-items: center;
+    height: 5rem;
+    padding: 0.5rem 0.2rem;
+    border-radius: 0.2rem;
+    font-weight: bold;
+    border: 0.2rem solid blue;
+    margin-bottom: 1.5rem;
+    margin-right: 0.5rem;
+}
+.action-buttons span{
+    font-size: 4rem;
+    padding-left: 2rem;
+    color: rgba(255,150,0,1);
+}
+.about-us .learn-more{
+    margin-top: 1rem;
+    width: 12rem;
+    padding: 0.7rem 0.3rem;
+    background-color: blue;
+    color: var(--color-white);
+    font-weight: bold;
+    border-radius: 1.5rem;
+}
+/*----End--*/

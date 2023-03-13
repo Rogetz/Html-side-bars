@@ -1,0 +1,315 @@
+:root{
+    /*color variables*/
+    --color-white: rgba(255,255,255,1);
+    --color-light: rgba(100,100,130,0.5);
+    --color-dark: rgba(0,0,0,1);
+    --color-light-dark: rgba(0,0,0,0.5);
+    --color-grey: rgba(155,155,155,1);
+    --color-primary: rgba(0,0,255,0.8);
+    --color-danger: rgba(255,70,70,1);
+    --color-blue: rgba(0,0,255,0.8);
+    --color-light-blue: rgba(150,150,255,0.5);
+    --color-success: rgba(0,255,0,0.8);
+    --color-light-green: rgba(0,255,0,0.5);
+    --color-green: rgba(0,255,0,1);
+    --color-pink: rgba(255,0,150,1);
+    --color-purple: rgba(50,0,255,1);
+    /*padding variales*/
+    --card-padding: 0.5rem;
+    --larger-padding: 2em;
+    /*margin-variables*/
+    --margin-top: 1rem;
+    --margin-bottom: 1rem;
+    --margin-right: 1rem;
+    --margin-left: 1rem;
+    /*border-radius*/
+    --card-border-radius: 1rem;
+    /*logo img sizing */
+    --logo-img-width: 3rem;
+    --logo--img-height: 3rem;
+    /*logo text sizing*/
+    --logo-text-font-size: 1rem;
+    --logo-text-line-height: 1rem;
+    /*button sizing*/
+    --button-width: 2rem;
+    --button-height: 2rem;
+    /*--menu-items*/
+    --menu-item-bottom: 0.3rem;
+    --menu-item-line-height: 1.5rem;
+    --menu-item-radius: 0.2rem;
+    --menu-item-width: 6.5rem;
+    /*transition time*/
+    --fast-smooth-transition: 0.3s;
+    /*text-styling, don't repest colors, only text-muted
+    is valid here.*/
+    --text-muted: rgba(0,0,0,0.6);
+    /*notification bar*/
+    --notification-light: rgba(255,255,255,0.8);
+    --notification-dark: rgba(0,0,0,1);
+}
+/*Overall general styling*/
+/*avoid the * styling, it might cause unneccesary styling where, unneccesary */
+body{
+    padding: 0;
+    margin: 0;
+    background-color: var(--color-light);
+}
+h1{
+    color: var(--color-blue);
+    margin-bottom: 0;
+    margin-top: 0;
+    background-color: var(--color-dark);
+    width: fit-content;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    border-radius: 0.4rem;
+    box-shadow: 0.3rem 0.3rem 0.2rem var(--color-light-blue) inset;
+}
+.container{
+    margin-top: 1em;
+    margin-left: 1em;
+    display: grid;
+    grid-template-columns: 13rem auto 16rem;
+    background-color: transparent;
+    width: 100%;
+    height: 100vh;
+    gap: 2rem;
+}
+
+/*aside css properties*/
+aside{
+    height: 100vh;
+    background-color: var(--color-light-blue);
+    border-radius: var(--card-border-radius);
+    box-shadow: 1rem 1rem 1rem var(--color-dark);
+}
+aside:hover{
+    box-shadow: none;
+}
+.logo{
+    width: 100%;
+    height: 4rem;
+    display: flex;
+    margin-bottom: 0.5rem;
+    margin-left: 0.7rem;
+}
+.logo-img{
+    width: var(--logo-img-width);
+    height: var(--logo--img-height);
+}
+.logo-text{
+    color: rgba(255,255,255,0.8);
+    font-size: x-large;
+    font-weight: bolder;
+    background-color: rgba(20,0,255);
+    border-bottom-right-radius: 0.3rem;
+    border-top-right-radius: 0.3rem;
+    line-height: 2em;
+    height: 2em;
+}
+.logo-extension{
+    color: rgba(255,20,180,0.8);
+}
+.close-btn{
+    width: var(--button-width);
+    height: var(--button-height);
+    margin-top: 0.5rem;
+    border-radius: 0.2rem;
+    font-size: xx-large;
+    padding: 0;
+    box-sizing: border-box;
+    margin-left: 2rem;
+    text-align: center;
+    display: none;
+}
+.menu-item:last-child{
+    position: absolute;
+    bottom: 5rem;
+}
+.menu-item{
+    margin-left: 2rem;
+    display: flex;
+    background-color: var(--color-light-blue);
+    justify-content: space-between;
+    width: var(--menu-item-width);
+    line-height: var(--menu-item-line-height);
+    padding: var(--card-padding);
+    margin-bottom: var(--menu-item-bottom);
+    border-radius: var(--menu-item-radius);
+    /*for a smoooth transition of all properties*/
+    transition: all var(--fast-smooth-transition);
+}
+.notification-bar{
+    padding-left: 0.4rem;
+    padding-right: 0.7rem;
+    border-radius: 0.5rem;
+    background-color: var(--notification-dark);
+    font-weight: bolder;
+    color: var(--color-danger);
+}
+.menu-item:hover{
+    margin-left: 0;
+    margin-bottom: 1rem;
+    background-color: var(--color-blue);
+}
+.icon > span{
+    color: var(--color-blue);
+}
+.menu-title{
+    font-weight: bold;
+    color: var(--color-light-dark);
+}
+
+/*Dashboard-properties or main properties*/
+main{
+    height: 100vh;
+    background-color: transparent;
+}
+/*mother to the progress items*/
+.progress-flow{
+    width: 98%;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 1.5em;
+    /*separating it with the below data*/
+    margin-bottom: 1rem;
+    /*for allowing the children's position absolute work well*/
+    /*position: relative; In this case however its not the direct parent,
+    so I've applied this to the other div*/
+}
+.progress-summary-amount{
+    font-size: larger;
+    margin-left: 2rem;
+    margin-top: 0.5rem;
+    font-weight: bolder;
+    color: var(--color-success);
+    border-width: 0.4rem;
+    border-style: double;
+    border-color: var(--color-light-blue);
+    border-left: none;
+    border-right: none;
+}
+.progress-summary-name{
+    margin-top: 2.5rem;
+    font-size: x-large;
+    margin-left: 1rem;
+    font-weight: bold;
+    color: var(--color-blue);
+    text-decoration: underline;
+}
+/*the three progress flow members*/
+.profits{
+    height: 15rem;
+    background-color: var(--color-white);
+    border-radius: var(--card-border-radius);
+    display: flex;
+    padding: 0.5rem;
+    /*position relative, for the sake of
+    absolute in children*/
+    position: relative;
+    /*overflow hidden so that there's 
+    no unusual layouts moving out.*/
+    overflow: hidden;
+}
+.stock-flow{
+    height: 15rem;
+    background-color: var(--color-purple);
+    border-radius: var(--card-border-radius);
+    display: flex;
+    padding: 0.5rem;
+    position: relative;
+    overflow: hidden;
+}
+.reviews-status{
+    height: 15rem;
+    background-color: var(--color-dark);
+    border-radius: var(--card-border-radius);
+    display: flex;
+    padding: 0.5rem;
+    position: relative;
+    overflow: hidden;
+}
+/*End of the general styling of the three 
+progress members*/
+main  input{
+    margin-bottom: 1rem;
+    border-radius: 0.3rem;
+}
+input[type="date"] {
+    background-color: var(--color-light);
+    color: var(--color-white);
+    box-shadow: 0.1rem 0.1rem 0.3rem var(--color-purple) inset;
+}
+.progress-time{
+    padding-left: 1rem;
+    color: var(--text-muted);
+    font-weight: bold;
+    /*line-height to adjust height of the line, hence position*/
+    line-height: 6rem;
+}
+.progress-icon{
+    font-size:xx-large;
+    margin-left: 0.5rem;
+    margin-top: 0.5rem;
+    padding: 0.5rem;
+    width: 3rem;
+    height: 3rem;
+    color: var(--color-blue);
+    border-radius: 50%;
+    background-color: var(--color-dark);
+    text-align: center;
+}
+.stock-flow .progress-icon{
+    color: var(--color-pink);
+    background-color: var(--color-white);
+}
+.reviews-status .progress-icon{
+    color: var(--color-white);
+    background-color: var(--color-blue);
+}
+/*styled three different properties.*/
+.reviews-status .progress-time,.stock-flow .progress-summary-name,.reviews-status .progress-circle-text{
+    color: white;
+}
+.progress-circle-text{
+    /*positon absolute only works well if the parent has
+    the position relative property*/
+    font-size: larger;
+    font-weight: bold;
+    position: absolute;
+    top: 7.5rem;
+    right: 5rem;
+}
+svg{
+    width: 12rem;
+}
+.progress-circle{
+    fill: none;
+    stroke-width: 1rem;
+    stroke: var(--color-blue);
+    stroke-dasharray: 310;
+    stroke-dashoffset: -50;
+    stroke-linecap: round;
+    margin-right: 1rem;
+    margin-top: 3rem;
+}
+.tracker{
+    position: absolute;
+    right: 1.5rem;
+    font-size: larger;
+    font-weight: bolder;
+}
+.progress-card{
+    box-shadow: 1rem 1rem 1rem  var(--color-dark) ;
+    transition: all var(--fast-smooth-transition);
+}
+.progress-card:hover{
+    box-shadow: 1rem 1rem 1rem 0.3rem var(--color-light-blue);
+}
+
+
+/*The right/Notifications properties*/
+.right{
+    height: 100vh;
+    background-color: transparent;
+}

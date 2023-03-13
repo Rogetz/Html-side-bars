@@ -1,0 +1,6 @@
+Frontend practice:
+	Create a card  slider whereby it continually slides to the next and when it reaches the end, it smoothly jumps on back to the  first card smoothly as if the card was right after the last card.
+
+download and use the lessc,css-minify,minify package from the npm.
+Reasearch what is sql ddl.
+Introduction to using webpack for bundling in javascript

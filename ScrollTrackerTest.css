@@ -1,0 +1,67 @@
+*{
+    overflow-x: hidden;
+}
+
+/*for the testDiv*/
+.test-div{
+    position: relative;
+    top: 5px;
+    left: 0.8px;
+    background-color: blue;
+}
+.space-occupier{
+    width: 80%;
+    height: 100vh;
+    background-color: black;
+    position: relative;
+    margin: auto;
+    margin-top: 5rem;
+    margin-right: -100%;
+    padding-bottom: 5rem;
+    text-align: center;
+    display: flex;
+    align-items: end;
+    transition: all 3s;    
+}
+.space-occupier.scroll-right{
+    margin-right: 10%;
+}
+
+.space-occupier2.scroll-left{
+    margin-right: 10%;
+}
+
+.text-container{
+    width: 10rem;
+    height: 10rem;
+    background-color: blue;
+    color: white;
+    z-index: 10;
+    margin-left: 25rem;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.labels{
+    margin-left: 25rem;
+    background-color: blue;
+    color: white;
+    position: absolute;
+    z-index: 20;
+}
+
+.space-occupier2{
+    padding-top: 3rem;
+    position: relative;
+    margin: auto;
+    margin-top: 3rem;
+    margin-right: -100%;
+    width: 80%;
+    height: 100vh;
+    background-color: white;
+    box-shadow: 0.5rem 0.5rem 1rem 1rem blue;
+    display: flex;
+    align-items: start;   
+    transition: all 3s; 
+}

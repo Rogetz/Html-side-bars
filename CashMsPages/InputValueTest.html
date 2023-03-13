@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Input Value Test</title>
+</head>
+<body>
+    <input type="text" class="search-bar">
+    <script>
+
+            var searchBar = document.querySelector(".search-bar");
+            searchBar.addEventListener("keyup",function(){
+                alert("some key has been pressed inside the search bar");
+            });
+            if(searchBar.value == ""){
+                searchBar.value = "My new value";
+            }
+    </script>
+</body>
+</html>

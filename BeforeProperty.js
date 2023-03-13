@@ -13,14 +13,16 @@ $(document).ready(function(){
    $(".close-btn").click(function(){
         $(".sidebar").addClass("shrinked-side-bar");
         $(".image-group").addClass("hide-elements");
-        $(".toggle-icons.open-menu").removeClass("toggleActive");
-        $(".toggle-icons.close-menu").addClass("toggleActive");
+        $(".menu-item.title").addClass("no-display");
+        $(this).removeClass("toggleActive");
+        $(".toggle-icons.open-btn").addClass("toggleActive");
    });
    $(".open-btn").click(function(){
      $(".sidebar").removeClass("shrinked-side-bar");
      $(".image-group").removeClass("hide-elements");
-     $(".toggle-icons.close-menu").removeClass("toggleActive");
-     $(".toggle-icons.open-menu").addClass("toggleActive");    
+     $(".menu-item.title").removeClass("no-display");
+     $(this).removeClass("toggleActive");
+     $(".toggle-icons.close-btn").addClass("toggleActive");    
    });
 
    // for the close and open buttons

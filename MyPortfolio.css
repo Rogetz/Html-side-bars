@@ -1,0 +1,359 @@
+:root{
+    --color-twitter: rgba(71,135,242);
+    --color-whatsapp: rgba(22,244,80,1);
+    --color-instagram: rgba(232,150,50,0.6);
+    --color-facebook: rgba(0,0,255,1);
+}
+
+*{
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    text-decoration: none;
+}
+
+body{
+    padding: 0;
+    margin: 0;
+}
+/*
+body{
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    row-gap: 3rem;
+
+    background-image: linear-gradient(0deg,rgba(0,0,255,0.7),rgba(0,0,0,0.7));
+}*/
+
+.main{
+    /*
+    transform-style: preserve-3d;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    */
+    /*fetched from the body*/
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    row-gap: 3rem;
+
+    background-image: linear-gradient(0deg,rgba(255,255,255,1),rgba(0,0,255,1)),url("Mine1.jpg");   
+}
+.intro-section{
+    width: 80%;
+    height: 80vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform-origin: center;
+    transform-style: preserve-3D;
+}
+.intro{
+    border-radius: 1rem;
+    border: 0.1rem solid blue;
+    background-image: linear-gradient(rgba(0,0,255,0.7),rgba(0,150,255,0.5)), url("Mine1.jpg");
+}
+@media screen and (max-width : 768px){
+    .social-handles{
+        left: 0rem;
+    }
+    .intro-section{
+        width: 100%;
+    }
+    .intro{
+        width:100%;
+        background-image: linear-gradient(0deg, rgba(150,50,255,1),rgba(255,0,255,0.5)), url("Mine2.jpg");   
+    }
+    .main{
+        background-image: linear-gradient(0deg,rgba(0,0,0,0.7),rgba(0,0,0,1)),url("MkuuCroped.PNG");
+        background-size: cover;
+        background-position: center center;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+    }
+}
+.side{
+    top: -40rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    height: 80vh;
+    margin: auto;
+    text-align: center;
+    box-shadow: 0.1rem 0.1rem 0.5rem 0.1rem black;
+    overflow: hidden;
+    background-color: blue;
+    background-attachment: fixed;
+    background-position: center center;
+    background-size: cover;
+    transition: all 1s;
+    z-index: 10;
+    background-repeat: no-repeat;
+    transform-origin: 50% 50%;        
+    position: absolute;
+    transform: rotateY(calc(90deg * var(--i))) translateZ(5rem);
+}
+
+@keyframes introAnimation{
+    0%{
+        transform: rotateX(0deg) rotateY(0deg);
+    }
+    100%{
+        transform: rotateX(0deg) rotateY(360deg);
+    }
+}
+.intro .profession{
+    background-color: black;
+    width: fit-content;
+    margin-top: -20rem;
+    color: black;
+    transition: all 5s;
+}
+.intro .profession.active{
+    color: white;
+    background-color: transparent;
+    margin-top: 0;
+}
+.intro .arrow-container .action-button{
+    width: 8rem;
+    height: 2.5rem;
+    margin-right: 0;
+    border-radius: 2rem;
+    background-color: rgba(255,0,255,0.7);
+    font-weight: bolder;
+    font-size: 1rem;
+    color: blue;
+    border: none;
+    box-shadow: 0.1rem 0.1rem 0.3rem 0.05rem rgba(0,0,255,1);
+}
+.intro .arrow-container .action-button:hover{
+    background-color: white;
+}
+
+.intro .arrow-container .fa-long-arrow-right{
+    /*alternate here helps that the arrow does not just jump from the end, to the start, it smoothly moves from the end back to the start. */
+    animation: arrowMove 1s infinite alternate;
+    color:white;
+    transition: all 0.3s;
+}
+.intro .arrow-container .fa-long-arrow-right:hover{
+    animation-play-state: paused;
+    margin-right: 0;
+}
+@keyframes arrowMove{
+    0%{
+        margin-right: 2rem;
+        transform: rotateX(0deg);
+    }
+    100%{
+        margin-right: 0rem;
+        transform: rotateX(360deg);
+    }
+}
+.intro .arrow-container{
+    font-size: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 10rem;
+    color: blue;
+    opacity: 0;
+    transform-origin: left;
+    transform: rotate(0deg);
+    transition: all 3s;
+}
+.intro .arrow-container.active{
+    column-gap: 0.3rem;
+    transform: rotate(360deg);
+    opacity: 1;
+}
+.side.fade-in{
+    top: 3rem;
+}
+.intro .greetings{
+    font-size: 1.5rem;
+    font-weight: bolder;
+    position: relative;
+    margin-left: -120%;
+    color: blueviolet;
+    transition: all 1s;
+}
+.intro .greetings.slide-right{
+    margin-left: 5%;
+}
+.intro .my-name{
+    color: blue;
+    display: flex;
+    justify-content: center;
+}
+.intro .my-name span{
+    background-color: blue;
+    opacity: 0;
+    transition: all 0.5s;
+}
+.intro .my-name span.active{
+    opacity: 1;
+    background-color: transparent;
+}
+
+.intro .my-name span.space-center{
+    width: 2rem;
+    height: 2rem;
+    background-color: transparent;
+}
+.intro .pronoun{
+    color: purple;
+    font-size: 1.5rem;
+    opacity: 0;
+    transition: all 1s;
+}
+.intro .pronoun.active{
+    opacity: 1;
+}
+
+/* Projects div*/
+.projects{
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
+    margin-top: 3rem;
+    background-color: blue;
+}
+
+/*Socila handles section*/
+.social-handles{
+    width: 6rem;
+    position: absolute;
+    height: 30rem;
+    background-color: transparent;
+    /*background-image: linear-gradient(rgba(0,0,255,0.7),rgba(50,50,255,0.8));*/
+    left: 1rem;
+    top: 5rem;
+    display:  flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 2rem;
+    border-radius: 1rem;
+    transition: all 5s ease;
+    transform-style: preserve-3d;
+    /*box-shadow: 0.05rem 0.05rem 0.1rem 0.1rem black;*/
+}
+/*
+.social-handles:hover{
+    background-image: linear-gradient(blueviolet,rgba(50,50,255,0.8));
+    box-shadow: 0.05rem 0.05rem 0.3rem 0.1rem blue;
+}*/
+.social-handles .fa-container{
+    left: 0.8rem;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.5rem;
+    height: 3rem;
+    border-radius: 0.1rem;
+    background-color: black;
+    perspective-origin: left;
+    transform-style: preserve-3d;
+    transform-origin: left;
+    transform: rotateX(-45deg);
+    box-shadow: 0.05rem 0.05rem 0.1rem 0.05rem blue;
+    animation: 0.8s rotateSocials ease-out infinite alternate;
+}
+.social-handles .fa{
+    font-size: 1.5rem;
+}
+@keyframes rotateSocials{
+    0%{
+        transform: rotateX(0deg) rotateY(0deg);
+    }
+    100%{
+        transform: rotateX(10deg) rotateY(20deg);
+    }
+}
+.social-handles .fa-container::before{
+    /*always ensure you give the position attribute to teh after and before properties.*/
+    content: "";
+    width: 0.3rem;
+    height: 103%;
+    background-color: blue;
+    position: absolute;
+    right: -0.3rem;
+    top: 0;
+    border-top-right-radius: 0.3rem;
+    border-top-right-radius: 1rem;
+    border-bottom-right-radius: 0.5rem;
+    transform-origin: left;
+    transform: skewY(-45deg);
+}
+.social-handles .fa-container::after{
+    content: "";
+    width: 104%;
+    height: 0.3rem;
+    background-color: blue;
+    position: absolute;
+    top: -0.2rem;
+    left: 0.25rem;
+    border-top-right-radius: 0.2rem;
+    border-top-left-radius: 0.4rem;
+    
+    transform-origin: top;
+    transform: skewX(-45deg);
+    
+}
+
+.social-handles .fa-container:hover{
+    background-color: rgba(255,255,255,0.5);
+    box-shadow: 0.1rem 0.1rem 0.1rem 0.05rem purple;
+    left: -0.8rem;
+    animation-play-state: paused;
+    transform: rotateX(0deg) rotateY(0deg);
+}
+.social-handles .fa.fa-whatsapp{
+    color: var(--color-whatsapp);
+}
+.social-handles .fa.fa-instagram{
+    color: var(--color-instagram);
+}
+.social-handles .fa.fa-linkedin{
+    color: var(--color-facebook);
+}
+.social-handles .fa.fa-facebook{
+    color: var(--color-facebook);
+}
+.social-handles .fa.fa-github{
+    color: white;
+}
+.social-handles .fa.fa-twitter{
+    color: var(--color-twitter);
+}
+.social-handles .fa.fa-stack-overflow{
+    color: var(--color-instagram);
+}
+
+
+@keyframes colorChange{
+    0%{
+        background-image: linear-gradient(rgba(0,0,255,0.7),rgba(50,50,255,0.8));
+        box-shadow: 0.05rem 0.05rem 0.1rem 0.1rem black;
+    }
+    100%{
+        background-image: linear-gradient(rgba(255,0,255,1),rgba(100,100,255,1));
+        box-shadow: 0.05rem 0.05rem 0.1rem 0.1rem black;
+    }
+}

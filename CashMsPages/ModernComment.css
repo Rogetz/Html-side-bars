@@ -1,0 +1,124 @@
+
+
+/*Th body part*/
+body{
+    padding: 0;
+    margin: 0;
+}
+/*--end*/
+
+/*The logo  */
+.comment-section .logo{
+    width: 100%;
+    height: 4rem;
+    display: flex;
+    justify-content: center;
+}
+.comment-section .logo-img{
+    /*these are the axact measurements btw*/
+    width: 3.1rem;
+    height: 3rem;
+}
+.comment-section .logo-text{
+    color: rgba(255,255,255,0.8);
+    font-size: x-large;
+    font-weight: bolder;
+    background-color: rgba(20,0,255);
+    border-bottom-right-radius: 0.3rem;
+    border-top-right-radius: 0.3rem;
+    line-height: 2em;
+    height: 2em;
+}
+.comment-section .logo-extension{
+    color: rgba(255,20,180,0.8);
+}
+/* --The End--*/
+
+/*comment section */
+.comment-section{
+    position: relative;
+    width: 22rem;
+    height: auto;
+    background-color: white;
+    padding: 0;
+    box-shadow: 0rem 0rem 0.5rem blue;
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+    margin: auto;
+    top: 5rem;
+    border-radius: 0.3rem;
+}
+.comment-section-header{
+    width: 100%;
+    background-color: blue;
+    height: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    position: relative;
+    top: 0;
+    margin: 0;
+    border-radius: 0.3rem;
+}
+.main-section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 2rem;
+    margin: 0;
+    box-sizing: border-box;
+}
+.email-address{
+    margin-top: 1rem;
+    width: 18rem;
+    height: 2rem;
+    padding: 0.1rem 0.3rem;
+    border: 0.2rem solid blue;
+    border-radius: 0.5rem;
+}
+.text-area{
+    width: 90%;
+    height: 5rem;
+    padding: 0.1rem 0.3rem;
+    margin-bottom: 0.1rem;
+    border: 0.2rem solid blue;
+    font-weight: bold;
+    font-size: 1rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.comment-footer{
+    box-sizing: border-box;
+    width: 100%;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-weight: bold;
+    padding: 1rem 0rem;
+    color: white;
+    margin-top: 0;
+    border-radius: 0.3rem;
+}
+.footer-text{
+    text-align: center;
+}
+.submit-btn{
+    font-size: 1rem;
+    width: 8rem;
+    height: 2.5rem;
+    color: blue;
+    background-color: white;
+    border: 0.2rem solid blue;
+    border-radius: 0.5rem;
+    font-weight: bold;
+    margin-bottom: 0.1rem;
+}
+.submit-btn:hover{
+    color: white;
+    background-color: blue;
+    box-shadow: 0.1rem 0.1rem 0.1rem blue;
+}
+/*---End --*/

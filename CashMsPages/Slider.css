@@ -1,0 +1,78 @@
+body{
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+}
+*{
+    box-sizing: border-box;
+}
+.slider{
+    width: 60rem;
+    height: 30rem;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+}
+
+.slides{
+    width: 60rem;
+    height: 90%;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    /*ensure that you specify flex-wrap to no wrap, so that it can not overlp the items verticlally
+    also ensure you give the image-divs a minimum height*/
+    flex-wrap: nowrap;
+    overflow: auto;
+    /*what will be remaining is removing this overflow auto*/
+}
+.slide{
+    /* This minimum width here is what actually prevents the flex from compressing, things
+    and ensures that each item fully covers the entire div no matter its small size.*/
+    min-width: 60rem;
+    height: 100%;
+    overflow: hidden;/*overflow for preventing any item from overlaping the stipulated div*/
+}
+.first-slide{
+    /*This minimum width here is the game changer, it prevents compression of items*/
+    min-width: 60rem;
+    height: 100%;
+    overflow: hidden;
+}
+.image-div{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/*the nav div*/
+.nav-div{
+    width: 100%;
+    height: 10%;
+    display: flex;
+    flex-direction: row;
+    background-color: blue;
+}
+
+/*all about radios*/
+
+.navigation-radio{
+    position: absolute;
+    bottom: 5rem;
+    left: 5rem;
+    z-index: 10rem;
+}
+.navigation-radio:checked ~ .first-slide{
+    margin-left: calc(-60rem*var(--i));
+}
+#radio2:checked {
+    margin-left: -100%;
+}

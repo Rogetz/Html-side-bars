@@ -5,12 +5,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="BeforeProperty.css">
+    <!--<script src="https://kit.fontawesome.com/378a91bbcd.js" crossorigin="anonymous"></script>-->
     <link rel="stylesheet" href="fontawesome-free-6.2.0-web\css\all.css">
     <script  src="jquery\dist\jquery.js"></script>
     <title>Before property</title>
 </head>
 <body>
     <div class="sidebar">
+        <div class="toggle-menu">
+            <span class="fa fa-close  close-btn  toggleActive"></span>
+            <span class="fa fa-bars  open-btn"></span>
+        </div>
         <div class="image-group">
             <div class="sidebar-image"></div>
             <h1>Ogeta Ronny</h1>
@@ -19,32 +24,45 @@
         <div class="sidebar-menu">
             <nav >
                 <li class="menu-item">
-                    <span class="icon">Test-Icon</span>
+                    <span class="icon fa fa-desktop"></span>
                     <span class="title"><a href="#">Home</a></span>
                 </li>
                 <li class="menu-item">
-                    <span class="icon">Test-Icon</span>
+                    <span class="icon fa fa-bank"></span>
                     <span class="title"><a href="#">Administration</a></span>
                 </li>
                 <li class="menu-item">
-                    <span class="icon">Test-Icon</span>
+                    <span class="icon fa fa-cutlery"></span>
                     <span class="title"><a href="#">Orders</a></span>
                 </li>
                 <li class="menu-item">
-                    <span class="icon">Test-Icon</span>
+                    <span class="icon fa fa-cog"></span>
                     <span class="title"><a href="#">Settings</a></span>
                 </li>
                 <li class="menu-item">
-                    <span class="icon">Test-Icon</span>
+                    <span class="icon fa fa-sign-out"></span>
                     <span class="title"><a href="#">Log-Out</a></span>
                 </li>   
+                <li class="menu-item">
+                    <span class="icon fa fa-share-alt"></span>
+                    <span class="title"><a href="#">Share</a></span>
+                </li>
             </nav>
         </div>
     </div>
-    <div class="toggle-menu">
-        <span class="fa fa-close toggle-icons close-btn  toggleActive"></span>
-        <span class="fa fa-barso toggle-icons open-btn"></span>
-    </div>
+
+    <nav class="footer">
+        <p>Check our linkedin Profile<span class="social-icon fa fa-linkedin"></span></p>
+        <p>follow us on facebook, twitter, instagram:     
+            <span class="social-icon fa fa-facebook" aria-hidden="false"></span>
+            <span class="social-icon fa fa-twitter"></span>
+            <i class="social-icon fa-brands fa-instagram"></i>
+            <p>subscribe to our youtube channel:   <span class="social-icon fa fa-youtube-play "></span></p>
+            <p>you can also fork us on Github:   <span class="social-icon fa fa-github"></span></p>
+            <p>you can also check our verified answers to common questions at stackoverflow:   <span class="social-icon fa fa-stack-overflow"></span></p>
+
+        </p>
+    </nav>
 
     <script type="text/javascript" src="BeforeProperty.js"></script>
 </body>

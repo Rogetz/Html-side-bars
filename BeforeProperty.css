@@ -1,9 +1,19 @@
+@font-face {
+    font-family: 'Koulen-regular';
+    src: url(/Koulen-Regular.ttf);
+}
+
 body{
     padding: 0;
     margin: 0;
     background-color: aliceblue;
+    font-family:'Times New Roman', Times, serif;
     font-size: 15px;
     background-color: rgba(0,0,150,0.8);
+}
+/*set the specific font for the p tag elements, the rest use the one in the body */
+p{
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 a{
     text-decoration: none;
@@ -37,6 +47,7 @@ li{
 }
 .sidebar-menu{
     margin-top: 0.5em;
+    box-sizing: border-box;
 }
 .sidebar-menu  .icon{
     color: rgba(155,0,255,0.7);
@@ -51,7 +62,6 @@ li{
     background-size: cover;
     /*the bg position is a good feature though here its showing the full view of the shoes. */
     /*background-position: center;*/
-
 }
 .image-group{
     position: relative;
@@ -82,27 +92,37 @@ cause its literally a class added.*/
     font-weight: bold;
 }
 .menu-item.active .icon{
-    color: rgba(0,0,255,0.9);
+    color: rgba(0,0,0,0.9);
+    background-color: white;
 }
 .toggle-menu{
     position: absolute;
-    left: 30vw;
+    right: 5vw;
 }
-.toggle-icons{
+.close-btn{
     font-size: xx-large;
+    color: red;
+    position: absolute;
     padding: 0%;
     box-sizing: border-box;
-    width: 2em;
-    position: absolute;
     text-align: center;
+    width: 2em;
     height: 1.4em;
-    color: aliceblue;
-    background-color: rgba(0,0,0,0.9);
-    border-radius: 0.1em;
+}
+.open-btn{
+    font-size: xx-large;
+    color: white;
+    position: absolute;
+    padding: 0%;
+    box-sizing: border-box;
+    text-align: center;
+    width: 2em;
+    height: 1.4em;
 }
 .toggleActive{
-    z-index: 4em;
+    z-index: 4;
     backdrop-filter: blur(3em);
+    background-color: blue;
 }
 .shrinked-side-bar{
     width: 5vw;
@@ -110,6 +130,9 @@ cause its literally a class added.*/
 }
 .hide-elements{
     visibility: hidden;
+}
+.no-display{
+   display: none; 
 }
 
 /*for the modern scrollbar*/
@@ -123,4 +146,42 @@ cause its literally a class added.*/
 ::-webkit-scrollbar-thumb{
     background-color: rgba(150,20,255,0.8);
     border-radius: 1em;
+}
+.footer{
+    position: fixed;
+    left: 30vw;
+    bottom: 0;
+}
+.icon{
+    background-color: blue;
+}
+.social-icon{
+    background-color: white;
+    font-size: x-large;
+    width: 2em;
+    height: 1em;
+    text-align: center;
+    border-radius: 1em;
+    padding-top: 0.3em;
+}
+.fa-linkedin{
+    color: blue;
+}
+.fa-facebook{
+    color: blue;
+}
+.fa-instagram{
+    color: rgba(200,100,1,0.8);
+}
+.fa-twitter{
+    color: blue;
+}
+.fa-stack-overflow{
+    color: rgba(200,100,1,0.8);
+}
+.fa-github{
+    color: rgba(0,0,0,0.9);
+}
+.fa-youtube-play{
+    color: rgba(255,0,0,0.9);
 }

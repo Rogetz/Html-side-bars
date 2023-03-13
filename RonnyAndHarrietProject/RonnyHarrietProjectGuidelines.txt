@@ -1,0 +1,16 @@
+The RonnyHarrietProject.
+
+Toolset definition:
+	use color variables, no direct colour given.
+	ensure uniformity in the color design, across all pages.
+	A favicon must be present in all the pages,besides the page titles.
+	A logo must be there in all the pages as well.
+
+
+landing page design
+
+Start with a favicon, the favicnon is simply derived from the logo.
+First the logo should be a very captivating one. evenly placed some pixels a away from the top margin.
+First I must create an image slider just right above the search bar. Its an image slider designed in the same way as that of shopify, bu here it is horizontally placed.
+The second thing it must have a very cool pictorial layout blenede with some colour, of course with a clip-path twist.
+I can actually use two clip paths one, for the polygon and the other for the circle, or rather a small circle with a pop up of what we do.

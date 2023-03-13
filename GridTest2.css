@@ -1,0 +1,7 @@
+body{
+    display: grid;
+    grid-template-columns: 15rem auto 25rem;
+}
+div{
+    height: 20rem;
+}

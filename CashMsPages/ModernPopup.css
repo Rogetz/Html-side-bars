@@ -1,0 +1,90 @@
+
+body{
+    padding: 0;
+    margin: 0;
+}
+main{
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.changed-Main{
+    background-color: rgba(0,0,0,0.3);
+}
+.pop-up{
+   width: 20rem;
+   height: 22rem;
+   background-color: blue;
+   position: absolute;
+   padding-bottom: 0.5rem ;
+   padding-left: 3rem;
+   padding-right: 3rem;
+   color: white;
+   display: none;
+   visibility: hidden;
+   flex-direction: column;
+   align-items: center;
+   border-radius: 0.5rem;
+   box-shadow: 0.3rem 0.3rem 0.2rem rgba(0,0,0,0.5);
+    /*confirm how to declare two transform properties in one transform
+    i.e is it separated by a comma or a space, or is another instnce
+    declared in an entirely different new column.*/
+   transition: all .3s;  
+}
+.pop-up:hover{
+    background-color: white;
+    color: blue;
+}
+.pop-up:hover .tick-icon{
+    background-color: blue;
+    color: white;
+}
+.text-body{
+    text-align: center;
+}
+.tick-icon{
+    border-radius: 50%;
+    background-color: green;
+    color: white;
+    font-size: 6rem;
+    padding: 1rem 1rem;
+}
+.ok-button{
+    width: 15rem;
+    height: 2.5rem;
+    color: green;
+    font-weight: bolder;
+    border-radius: 2rem;
+    background-color: white;
+    border: 0.2rem solid blue;
+    box-shadow: 0.1rem 0.05rem 0.05rem white;
+    z-index: 5;
+}
+.submit-btn{
+    position: absolute;
+    z-index: 10;
+}
+.submit-btn:hover, .ok-button:hover{
+    background-color: blue;
+
+}
+.ok-button:hover{
+    box-shadow: 0.2rem 0.2rem 0.2rem rgba(0,0,0,0.5);
+    color : white;
+}
+.pop-up .tick-div{
+    position: relative;
+    top: -3rem;
+}
+.pop-up-display{
+    display: flex;
+    visibility: visible;
+    transform: rotate(360deg);  
+    z-index: 20;
+}
+.full-appreciation{
+    font-weight: bold;
+}

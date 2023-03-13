@@ -1,0 +1,349 @@
+/* for google fonts*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;900&display=swap');
+
+:root{
+    /*color variables*/
+    --color-white: rgba(255,255,255,1);
+    --color-light: rgba(255,255,255,0.7);
+    --color-dark: rgba(0,0,0,1);
+    --color-light-dark: rgba(0,0,0,0.5);
+    --color-grey: rgba(155,155,155,1);
+    --color-primary: rgba(0,0,255,0.8);
+    --color-danger: rgba(255,70,70,1);
+    --color-blue: rgba(0,0,255,0.8);
+    --color-light-blue: rgba(150,150,255,0.5);
+    --color-success: rgba(0,255,0,0.8);
+    --color-light-green: rgba(0,255,0,0.5);
+    --color-green: rgba(0,255,0,1);
+    --color-pink: rgba(255,0,150,1);
+    --color-light-pink: rgba(255,0,150,0.4);
+    --color-purple: rgba(50,0,255,1);
+    --color-light-purple: rgba(50,0,255,1);
+    /*padding variales*/
+    --card-padding: 0.5rem;
+    --larger-padding: 2em;
+    /*margin-variables*/
+    --margin-top: 1rem;
+    --margin-bottom: 1rem;
+    --margin-right: 1rem;
+    --margin-left: 1rem;
+    /*border-radius*/
+    --card-border-radius: 1rem;
+    /*logo img sizing */
+    --logo-img-width: 3rem;
+    --logo--img-height: 3rem;
+    /*logo text sizing*/
+    --logo-text-font-size: 1rem;
+    --logo-text-line-height: 1rem;
+    /*button sizing*/
+    --button-width: 2rem;
+    --button-height: 2rem;
+    /*--menu-items*/
+    --menu-item-bottom: 0.3rem;
+    --menu-item-line-height: 1.5rem;
+    --menu-item-radius: 0.2rem;
+    --menu-item-width: 6.5rem;
+    /*transition time*/
+    --fast-smooth-transition: 0.3s;
+    /*text-styling, don't repest colors, only text-muted
+    is valid here.*/
+    --text-muted: rgba(0,0,0,0.6);
+    /*notification bar*/
+    --notification-light: rgba(255,255,255,0.8);
+    --notification-dark: rgba(0,0,0,1);
+}
+.space-occupier{
+    position: relative;
+    height: 100vh;
+}
+/*The search results*/
+.search-results{
+    position: absolute;
+    background-color: purple;
+    color: white;
+    font-weight: bold;
+    width: auto;
+    height: auto;
+    top: 3.5rem;
+    border-radius: 0.3rem;
+    z-index: 10;
+}
+.search-results p{
+    width: auto;
+    height: auto;
+    border-bottom: 0.2rem solid black;
+}
+/*---End---*/
+body{
+    padding: 0;
+    margin: 0;
+    background-color: black;
+    overflow-x: hidden;
+    font-family: 'Roboto', sans-serif;
+}
+nav{
+    display: grid;
+    height: 5rem;
+    width: 100%;
+    background-color: aliceblue;
+    margin: auto;
+    grid-template-columns: 20rem auto;
+}
+header{
+    width: 100vw;
+    height: 5rem;
+    top: 0;
+    position: sticky;
+}
+ nav .header-icons{
+    visibility: none;
+    display: none;
+}
+header div{
+    margin: auto;
+    /*If you center a div it centers both horizontally and vertically*/
+}
+.search-div{
+    display: flex;
+}
+@media screen and (max-width: 991px){
+    .search-div {
+        display: none;
+        visibility: hidden;
+    }
+    nav .header-icons{
+        visibility: visible;
+        display: flex;
+        column-gap: 0.5rem;
+    }
+}
+.search-div div{
+    padding-right: 1rem;
+    box-sizing: border-box;
+}
+
+.logo{
+    width: 100%;
+    height: 4rem;
+    display: flex;
+    margin-bottom: 0.5rem;
+    margin-left: 0.7rem;
+}
+.logo-img{
+    width: var(--logo-img-width);
+    height: var(--logo--img-height);
+    /*translate has been really instrumental here.*/
+    transform: translate(10%,18%);
+}
+.logo-text{
+    color: rgba(255,255,255,0.8);
+    font-size: x-large;
+    font-weight: bolder;
+    background-color: rgba(20,0,255);
+    border-bottom-right-radius: 0.3rem;
+    border-top-right-radius: 0.3rem;
+    line-height: 2em;
+    height: 2em;
+}
+.logo-extension{
+    color: rgba(255,20,180,0.8);
+}
+.search-input{
+    width: 20rem;
+    height: 2.5rem;
+    border: 0.1rem solid transparent;
+    /*This outline is actually what's more important, it removes the border during focus.*/
+    outline: none;
+    border-radius: 1rem;
+    font-size: larger;
+    font-weight: bold;
+    padding-left: 1rem;
+    box-sizing: border-box;
+}
+.Other-items{
+    font-size: large;
+    font-weight: 900;
+    display: flex;
+    color: rgba(100,50,255,0.9);
+    padding-left: 1rem;
+}
+@media screen and (max-width: 991px){
+    .Other-items {
+        display: none;
+        visibility: hidden;
+    }
+}
+
+.Other-items div{  
+    display: flex;
+    font-size: medium;
+    padding-left: 0.3rem;
+    margin-right: 0.2rem;
+    padding-right: 0;
+}
+.search-form{
+    border: 0.2rem solid blue;
+    display: flex;
+    border-radius: 1rem;
+    padding-left: 0.2rem;
+    background-color: white;
+}
+.glass-holder{
+    margin: auto;
+    border: none;
+    background-color: transparent;
+    transform: translate(50%,10%);
+}
+.fa-magnifying-glass{
+    color: blue;
+    font-size:x-large;
+}
+
+/* everything about the drop down menus*/
+.list-container{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+.menu-titles:hover{
+    color: rgba(255,20,255,0.9);
+}
+/*For hiding basically anything*/
+/*For testing purposes place it before any other class for it to be applied first. */
+.visibility-hidden{
+    display: none;
+    visibility: hidden;
+}
+.menu-titles h3{
+    cursor: pointer;    
+}
+/*-----End of hiding anything------*/
+/* these two go together for the drop-down to work well*/
+.drop-down-group{
+    /*use both*/
+    display: none;
+    visibility: hidden;
+    flex-direction: column;
+    position: absolute;
+    margin-top: 3rem;
+    width: 10rem;
+    /*height: 15rem;*/
+    height: 18rem;
+    border: 1px solid black;
+    padding-left: 0rem;
+    border-radius: 0.3rem;
+    border-color: transparent;
+    background-color: white;
+    left: 0rem;
+}
+.drop-down-group.active{
+    position: absolute;
+    display: flex;
+    visibility: visible;
+}
+.drop-down-group div{
+    margin: auto;
+}
+hr{
+    background-color: black;
+    width: 99%;
+    margin-top: 0;
+    margin-bottom: 0;
+    height: 0.2rem;
+    margin: auto;
+}
+.drop-down-group .normal-link{
+    text-decoration: none;
+}
+.my-button{
+    border: 0.2rem solid transparent;
+    border-radius: 1rem;
+    padding: 0.5rem 1.5rem;
+    color: rgba(255,50,200);
+    background-color: rgba(251,157,5);
+}
+/*---------End of drop-down-group----*/
+.right{
+    margin-right: 0.6rem;
+    color: black;
+}
+span{
+    color: rgba(0,20,150,0.9);
+}
+/*concerning all links*/
+.my-button:hover{
+    box-shadow: 0.3rem 0.3rem 0.3rem blue;
+    background-color: white;
+}
+a:hover{
+    width: 100%;
+    box-shadow: 0.3rem 0.3rem 0.3rem blue;  
+    padding: 0.5rem 1.5rem;
+    border-radius: 1rem;
+    background-color: white;
+    border-color: transparent;
+}
+/*End of all links*/
+/*Everything footers*/
+footer{
+    color: black;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgba(255,255,255);
+}
+footer div{
+    text-align: center;
+    color: white;
+}
+footer .normal-link{
+    text-decoration: none;
+    color: black;
+}
+.social-media-accounts span{
+    font-size: xx-large;
+    color: white;
+    padding: 0.5rem;
+}
+.social-media-accounts span:hover{
+    box-shadow: 0.2rem 0.2rem 0.2rem black;
+    border-radius: 0.2rem;
+}
+.partners-info{
+    background-color: var(--color-blue);
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: auto;
+    font-size: larger;
+    padding: 1.5rem 0rem;
+}
+.partners-info span.info-title{
+    color: var(--color-white);
+    font-weight: bold;
+}
+.partners-info span{
+    height: fit-content;
+    padding: 0rem 1rem;
+}
+/*for uniformity amongst the pay dealers.*/
+.partners-info span img{
+    height: 3rem;
+}
+.payment-icon{
+    border-radius: 0.4rem;
+    box-shadow: 0.2rem 0.2rem 0.1rem var(--color-blue);
+}
+.copy-right{
+    color: blueviolet;
+}
+.terms-of-service{
+    padding: 1rem 0rem;
+    font-weight: bold;
+}
+/*End of footers*/

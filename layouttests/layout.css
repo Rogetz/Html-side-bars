@@ -1,0 +1,43 @@
+
+body{
+    width: 100%;
+    height: auto;
+    padding: 0;
+    margin: 0;
+}
+.test{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-color: blue;
+    display: flex;
+    flex-wrap: wrap;
+}
+.inner-test{    
+    width: 100%;
+    height: 100vh;
+    background-color: transparent;
+    display: flex;
+    flex: 1 1 100%;
+    justify-content: center;
+    align-items: center;
+    background-color: blue;
+}                               
+.test2{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-color: yellow;
+}
+.slide-wrapper{
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+@media all and (max-width: 991px){
+    .test{
+        display: flex;
+        height: auto;
+    }
+}

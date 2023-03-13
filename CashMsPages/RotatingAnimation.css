@@ -1,0 +1,73 @@
+body{
+    padding: 0;
+    margin: 0;
+}
+
+.cube-platform{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+}
+.cube{
+    position: absolute;
+    transform-style: preserve-3d;
+    width: 10rem;
+    height: 10rem;
+    background-color: white;
+    animation: rotateAnime 5s linear infinite;
+}
+.cubeside{
+    position: absolute;
+    /*try giving the sides some top and left positioning*/
+    top: 0;
+    left:0;
+    width: 10rem;
+    height: 10rem;
+    background-color: blue;
+    transform: rotateY(calc(90deg*var(--i))) translateZ(5rem);
+    margin: 0;
+    padding: 0;
+}
+span{
+    margin: 0;
+}
+.top-side{
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 10rem;
+    height: 10rem;
+    background-color: blue;
+    transform: rotateX(calc(90deg*var(--i))) translateZ(5rem) ;
+}
+.bottom-side{
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 10rem;
+    height: 10rem;
+    background-color: blue;
+    transform: rotateX(calc(90deg*var(--i))) translateZ(5rem) ;
+}
+.top-side::before{
+    content: "";
+    position: absolute;
+    top:0;
+    bottom: 0;
+    width: 10rem;
+    height: 10rem;
+    background-color: purple;
+    transform: translateZ(3rem);
+}
+@keyframes rotateAnime{
+    0%{
+        transform: rotateX(-30deg) rotateY(0deg);
+    }
+    100%{
+        transform: rotateX(-30deg) rotateY(360deg);
+    }
+}

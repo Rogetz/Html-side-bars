@@ -1,0 +1,87 @@
+*{
+    text-decoration: none;
+    box-sizing: border-box;
+}
+body{
+    width: 100%;
+    min-height: 100vh;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.main-skeleton{
+    border-top: 0.1rem solid black;
+    border-left: 0.1rem solid black;
+    width: 25rem;
+    height: 15rem;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 0.5rem;
+    box-shadow: 0.2rem 0.2rem 0.2rem blue;
+}
+.top-section{
+    width: 100%;
+    height: 6rem;
+    padding: 0.5rem 0.3rem;
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+}
+.image-circle{
+    width: 4rem;
+    height: 4rem;
+    background-color: grey;
+    border-radius: 50%;
+    transition: 0.3s all;
+    animation: colorChange 1s linear alternate infinite;
+}
+.side-lines{
+    width: 17rem;
+    height: 100%;
+    padding: 0.5rem 0.5rem;
+    display: flex;
+    gap: 0.5rem;
+    flex-direction: column;
+    justify-content: center;
+}
+.side-line{
+    width: 100%;
+    height: 1.2rem;
+    background-color: grey;
+    border-radius: 0.1rem;
+    transition: 0.3s all;
+    animation: colorChange 0.5s linear alternate infinite;
+}
+
+
+.skeleton-body{
+    width: 100%;
+    height: 9rem;
+    padding: 0.5rem 0.3rem ;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: center;
+
+}
+.body-line{
+    width: 90%;
+    height: 2rem;
+    border-radius: 0.5rem;
+    background-color: grey;
+    transition: 0.3s all;
+    animation: colorChange 1s linear alternate infinite;
+}
+
+@keyframes colorChange{
+    0%{
+        opacity: 0.6;
+    }
+    100%{
+        opacity: 0.3;
+    }
+}

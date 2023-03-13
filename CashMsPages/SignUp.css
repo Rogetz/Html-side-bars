@@ -1,0 +1,140 @@
+
+body{
+    padding: 0;
+    margin: 0;
+}
+main{
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    min-height: 100vh;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+}
+/* The logo section.*/
+.SignUp-title .logo{
+    width: auto;
+    height: 4rem;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+}
+.SignUp-title .logo-img{
+    /*these are the axact measurements btw*/
+    width: 3.1rem;
+    height: 3rem;
+}
+.SignUp-title .logo-text{
+    color: rgba(255,255,255,0.8);
+    font-size: x-large;
+    font-weight: bolder;
+    background-color: rgba(20,0,255);
+    border-bottom-right-radius: 0.3rem;
+    border-top-right-radius: 0.3rem;
+    line-height: 2em;
+    height: 2em;
+}
+.SignUp-title .logo-extension{
+    color: rgba(255,20,180,0.8);
+}
+/* --The End--*/
+.SignUp-div{
+    position: relative;
+    top: 5rem;
+    background-color: white;
+    width: 24rem;
+    padding: 0.3rem 1rem;
+    padding-bottom: 2rem;
+    height: 28rem;
+    border-radius: 0.3rem;
+    box-shadow: 0.1rem 0.1rem 0.05rem blue;
+    transition: all 0.3s;
+}
+.SignUp-div:hover{
+    box-shadow: 0.2rem 0.2rem 1rem blue;
+}
+.SignUp-body{
+    padding: 1rem 1.5rem;
+}
+.SignUp-title{
+    width: 100%;
+    height: 5rem;
+    border-bottom: 0.2rem solid blue;
+    margin: 0 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-weight: bolder;
+    font-size: larger;
+    flex-direction: column;
+    row-gap: 0rem;
+    background-color: black;
+    padding: 0.5rem 0rem;
+}
+.input-divs{
+    margin: auto;
+}
+.input-divs .input-div input{
+    width: 100%;
+    height: 2rem;
+    margin: 1rem 0rem;
+    outline: none;
+    border: none;
+    border-bottom: 0.2rem solid grey;
+    transition: all 0.3s;
+}
+.input-divs .input-div input::placeholder{
+    transition: all 0.3s;
+}
+.input-divs .input-div label{
+    display: none;
+    visibility: hidden;
+    transition: all 0.3s;
+}
+.input-divs .input-div input:focus ::placeholder{
+    display: none;
+    visibility: hidden;
+}
+/*the ~ symbol is mostly instrumental in case where the sybling is the next and not before.*/
+.input-divs .input-div input:focus ~ label{
+    visibility: visible;
+    display: block;
+    color: blue;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    position: relative;
+    top: -4rem;
+}
+.SignUp-link{
+    display: flex;
+    text-decoration: none;
+    align-items: center;
+    justify-content: center;
+}
+.SignUp-button{
+    font-family: Arial, Helvetica, sans-serif;
+    width: 80%;
+    height: 2.5rem;
+    border-radius: 1rem;
+    background-color: white;
+    color: blue;
+    font-weight: bolder;
+    transition: all 0.3s;
+}
+.SignUp-button:hover{
+    background-color: blue;
+    color: white;
+}
+.title-text{
+    margin: 0;
+    line-height: 0.5rem;
+    font-size: x-large;
+}
+
+a:hover{
+    color: blue;
+    text-decoration: none;
+    font-weight: bold;
+}
