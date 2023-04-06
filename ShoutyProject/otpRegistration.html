@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="otpRegistration.css">
+    <link rel="stylesheet" href="..\fontawesome-free-6.2.0-web\css\all.min.css">
+    <link rel="stylesheet" href="..\fontawesome-free-6.2.0-web\css\brands.min.css">
+    <link rel="stylesheet" href="..\fontawesome-free-6.2.0-web\css\solid.min.css">
+    <title>Otp registration verification</title>
+</head>
+<body>
+    <div class="box">
+        <form action="" method="post" class="login-div active">
+            <div class="title">
+                <a href="#">Log In</a>
+                <a href="#" class="redirect-link">Sign Up</a>
+            </div>
+            <div class="input-div">
+                <input type="text" name="Name" id="Name" placeholder="Name">
+                <label for="Name">UserName</label>
+            </div>
+            <div class="input-div">
+                <input type="text" name="Email" placeholder="Email Adress" id="Email">
+                <label for="Email">Email address</label>
+            </div>
+            <div class="input-div">
+                <input type="password" name="password" placeholder="password" id="password">
+                <label for="password">password</label>
+            </div>
+            <div class="options-text">
+                <a href="#" class="forgot-link">forgot password?</a>
+            </div>
+            <button type="submit">Login</button>
+        </form>
+        <!--added the active class here for testing-->
+        <form action="" method="post" class="sign-up-div">
+            <div class="title">
+                 <!--dont have to be links-->
+                <a href="#" class="redirect-link">Login</a>
+                <a href="#">Sign Up</a>
+            </div>
+            <div class="input-div">
+                <input type="text" name="Name" id="Name" placeholder="Name">
+                <label for="Name">UserName</label>
+            </div>
+            <div class="input-div">
+                <input type="text" name="Email" placeholder="Email Adress" id="Email">
+                <label for="Email">Email address</label>
+            </div>
+            <div class="input-div">
+                <input type="password" name="password" placeholder="password" id="password">
+                <label for="password">password</label>
+            </div>
+            <div class="input-div">
+                <input type="password" name="password" placeholder="confirm password" id="password">
+                <label for="password">Confirm password</label>
+            </div>
+            <div class="options-text">
+                <p >Sign up with <a href="#"><span class="fa-brands fa-facebook"></span></a><a href="#"><span class="fa-brands fa-google"></span></a></p>
+            </div>
+            <button type="submit">Sign up</button>
+        </form>
+        <form action="/forgotPassword" method="post" class="forgot-div">
+            <div class="title">
+                <h1>Forgot password</h1>
+            </div>
+            <div class="input-div">
+                <input type="text" name="Email" placeholder="Email Adress" id="Email">
+                <label for="Email">New Email address</label>
+            </div>
+            <div class="input-div">
+                <input type="password" name="password" placeholder="confirm password" id="password">
+                <label for="password">New password</label>
+            </div>
+            <button type="submit">Sign up</button>
+        </form>
+    </div>
+    <script src="otpRegistration.js"></script>
+</body>
+</html>

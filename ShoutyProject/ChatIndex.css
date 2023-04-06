@@ -1,0 +1,54 @@
+*{
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+}
+body{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.main-div{
+    width: 80%;
+    height: 90vh;
+    background-color: rgba(0,0,10,1);
+    display: flex;
+    flex-direction: column;
+}
+.main-div .upper-section{
+    width: 100%;
+    height: 4rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: rgba(0,0,100,1);
+    color: white;
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+.main-div .upper-section .short-cut-icons{
+    display: flex;
+    flex-direction: row;
+}
+.main-div .nav-titles{
+    width: 100%;
+    height: 2rem;
+    background-color: blue;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+}
+.main-div .chat-body{
+    display: flex;
+    flex-direction: column;
+    background-color: transparent;
+}
+.main-div .chat-body .profile{
+
+}

@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;500&display=swap');
+
+*{
+    box-sizing: border-box;
+    text-decoration: none;
+}
+body{
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    min-height: 100vh;
+}
+.main{
+    width: 100%;
+    min-height: 100vh;
+    background-image: linear-gradient(rgba(255,255,255,1),rgba(0,0,255,0.2));
+}
+.main .header{
+    width: 10rem;
+    height: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    font-weight: 1000;
+    color: blue;
+}
+.main .header .fa-wifi{
+    color: rgba(255,0,255);
+}
+.blog-main{
+    width: 100%;
+    min-height: 100vh;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+.slider-wrapper{
+    width: 70%;
+    height: 42vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 0.5rem;
+    flex-wrap: nowrap;
+    overflow: hidden;
+}
+.slider{
+    /*simply set the grow and shrink properties to 0 to prevent the flex from either shrinking or growing */
+    flex: 0 0 19rem;
+    height: 40vh;
+    border: none;
+    overflow: hidden;
+    position: relative;
+    z-index: 2;
+    border-radius: 0.5rem;
+    box-shadow: 0.4rem 0.4rem 0.4rem rgba(0,0,0,0.5);
+}
+.title-div{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,255,0.3);
+    z-index: 3;
+    position: absolute;
+    padding: 2rem 1rem;
+    font-weight: bold;
+    font-size: 1.8rem;
+    color: blue;
+    border: none;
+    font-family: 'Roboto', sans-serif;
+}
+.author-div{
+    width: 80%;
+    height: 2.5rem;
+    z-index: 3;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 1rem;
+    border-top: 0.1rem solid white;
+    left: 2rem;
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: left;
+    font-weight: bold;
+    color: black;
+    font-family: 'Roboto', sans-serif;
+}
+.author-div .name-div{
+    width: auto;
+    height: 100%;
+    overflow: hidden;
+    text-align: left;
+    display: flex;
+    align-items:  center;
+}
+.author-div .img-div{
+    width: 2rem;
+    height: 2rem;
+    z-index: 4;
+}
+/*for the larger image*/
+.img-div{
+    width: 100%;
+    height: 100%;
+}
+.img-div img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.author-div .img-div img{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    z-index: 2;
+}
+
+/*content on the side*/
+.blog-side{
+    width: 25%;
+    height: 40vh;
+    background-color: white;
+    box-shadow: 0.2rem 0.2rem 0.2rem rgba(0,0,0,0.5);
+}

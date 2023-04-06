@@ -1,0 +1,503 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+
+
+*{
+    box-sizing: border-box;
+    text-decoration: none;
+}
+a{
+    text-decoration: none;
+}
+body{
+    width: 100%;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    /*a new feature for lazy loading might not be supported by other browsers execpt chrome.*/
+    content-visibility: auto;
+    /*for using initial heights and prevent certain layout changes*/
+    contain-intrinsic-size:initial;
+
+}
+.main{
+    width: 100%;
+    min-height: 100%;
+    padding: 0;
+    margin: 0;
+    background-image: linear-gradient(rgba(255,255,255,1),rgba(0,0,255,0.2));
+    /*background-image: linear-gradient(to bottom left, rgba(0,0,255,0.1),rgba(150,0,255));*/
+}
+.main .welcome-div .header{
+    width: 10rem;
+    height: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    font-weight: 1000;
+    color: blue;
+}
+.main .welcome-div .header .fa-wifi{
+    color: rgba(255,0,255);
+}
+.main .welcome-div{
+    width: 100%;
+    min-height: 100vh;
+    /*z-index also must work with position*/
+    z-index: 10;
+    position: relative;
+    /*background-image: linear-gradient(to bottom left, rgba(0,0,255,0.1),rgba(150,0,255));*/
+}
+.welcome-div .inner-welcome{
+    margin: auto;
+    width: 50%;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.welcome-div .inner-welcome h1{
+    color: blue;
+    font-size: 6rem;
+    margin-bottom: 0;
+}
+.welcome-div .inner-welcome .inner-paragraph{
+    background-color:transparent;
+    width: 100%;
+    height: auto;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    margin-top: 5rem;
+    font-size: 2rem;
+    color: blue;
+    padding: 1rem 2rem ;
+    background-color: rgba(0,0,0,0.1);
+    box-shadow: 0.1rem 0.1rem 0.1rem white;
+    border-radius: 0.5rem;
+    text-align: center;
+}
+.welcome-div .inner-welcome .inner-paragraph p{
+    margin: 0.5rem 0rem;
+    margin-bottom: 1rem;
+    padding: 0;
+    padding-bottom: 0rem;
+    color: white;
+    margin-left: 0;
+    transition: all 0.5s;
+    text-align: center;
+    animation: moveAnimation 1s linear alternate 1;
+}
+@media screen and (max-width: 768px){
+    .welcome-div .inner-welcome .inner-paragraph{
+        width: 80%;
+    }
+    .welcome-div .inner-welcome{
+        width: 90%;
+    }
+}
+.welcome-div .inner-welcome .inner-paragraph .talk-button-group{
+    font-size: 2rem;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.5rem 0.5rem;
+}
+.welcome-div .inner-welcome .inner-paragraph .talk-button-group .button{
+    font-size: 1.2rem;
+    font-weight: bold;
+    width: auto;
+    height: 3rem;
+    background-color: white;
+    /*border: 0.15rem solid black;*/
+    padding: 0.7rem 1.5rem;
+    border-radius: 0.3rem;
+    transition: all 1s;
+    text-decoration: none;
+    box-shadow: 0.1rem 0.1rem 0.1rem blue;
+}
+.welcome-div .inner-welcome .inner-paragraph .talk-button-group .button:hover{
+    background-color: blue;
+    color: white;
+}
+.welcome-div .inner-welcome p.second-text{
+    color: blue;
+    font-weight: bold;
+    text-align: center;
+    /*animation: reverseMovement 1s ease-in-out alternate infinite;*/
+}
+/*animation works with a single side property not two */
+@keyframes moveAnimation{
+    0%{
+        padding-left: 0rem;
+        font-size: 2rem;
+    }
+    100%{
+        padding-left: 5rem;
+        font-size: 2.5rem;
+    }
+}
+/*animation must start form where it actually is*/
+@keyframes reverseMovement{
+    0%{
+        padding-right: 0rem;
+    }
+    100%{
+        padding-right: 5rem;
+    }
+}
+.main .f-wrapper{
+    background-color: transparent;
+    width: 100%;
+    height: auto;
+    padding: 0;
+    /*This is what actually added a border between the top viewport and it */
+    border: 0rem solid black;
+}
+.main .f-wrapper hr{
+    border: 0.1rem solid white;
+    width: 80%;
+    margin: auto;
+    margin-bottom: 3rem;
+}
+.main .f-wrapper h1{
+    color: blue;
+    text-align: center;
+}
+.features-div{
+    position: relative;
+    padding: 2rem 1rem;
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-evenly;
+    row-gap: 8rem;
+    flex-wrap: wrap;
+    background-color: transparent;
+}
+.main .f-wrapper h1.feature-title{
+    margin-top: 3rem;
+    color: rgba(0,0,255,0.8);
+}
+.featured-item{
+    position: relative;
+    flex: 0 1 25rem;
+    height: 20rem;
+    padding-right: 1rem;
+    background-color: blue;
+    border-radius: 1rem;
+    box-shadow: 0.4rem 0.4rem 0.4rem rgba(0,0,0,0.5);
+    /*animation: bounceAnime 2s linear alternate infinite;*/
+}
+@media screen and (max-width: 991px){
+    .featured-item .body{
+        font-weight: 400;
+    }
+    .featured-item{
+        font-size: small;
+    }
+}
+.featured-item:nth-of-type(even){
+    background-color: white;
+    box-shadow: 0.4rem 0.4rem 0.4rem rgba(0,0,255,0.5);
+}
+@keyframes bounceAnime{
+    0%{
+        margin-top: 0rem;
+        margin-left: 0rem;
+    }
+    25%{
+        margin-top: 0rem;
+        margin-left: -1rem;
+    }
+    50%{
+        margin-top: 1rem;
+        margin-left: -1rem;
+    }
+    100%{
+        margin-top: 1rem;
+        margin-left: 0rem;
+    }
+}
+.featured-item .banner{
+    width: 6rem;
+    height: 6rem;
+    position: absolute;
+    top: -1.5rem;
+    left: -1.5rem;
+    z-index: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0.2rem 0.2rem 0.2rem rgba(0,0,255,0.5);
+    border-radius: 0.5rem;
+    background-color: rgba(255,255,255,1);
+}
+.featured-item .banner .fa{
+    width: 90%;
+    height: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3.5rem;
+    color: blue;
+}
+.featured-item:nth-of-type(even) .banner{
+    background-color: rgba(0,0,255,0.8);
+    box-shadow: 0.2rem 0.2rem 0.2rem rgba(0,0,0,0.5);
+}
+.featured-item:nth-of-type(even) .banner .fa{
+    color: white;
+}
+.featured-item .body{
+    padding-left: 2rem;
+    font-size: 1.5rem;
+    color: rgba(255,255,255,1);
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+.featured-item .body p{
+    font-family: 'Roboto',sans-serif;
+}
+.featured-item:nth-of-type(even) .body{
+    color: rgba(0,0,255,1);
+}
+.featured-item .body .button{
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    background-color: white;
+    font-weight: bold;
+    color: blue;
+    position: absolute;
+    z-index: 2;
+    bottom: 1rem;
+    right: 2rem;
+    border-radius: 0.5rem;
+    transition: all 0.5s;
+    box-shadow: 0.2rem 0.2rem 0.2rem rgba(0,0,0,0.5);
+}
+.featured-item .body .button:hover{
+    background-color: blue;
+    color: white;
+}
+.featured-item:nth-of-type(even) .body .button:hover{
+    background-color: white;
+    color: blue;
+}
+.featured-item:nth-of-type(even) .body a.button{
+    background-color: blue;
+    color: white;
+}
+.featured-item .title{
+    margin-left: 6.5rem;
+    text-align: left;
+    height: 5rem;
+    padding: 0;
+    padding-top: 2rem;
+    font-size: 1.8rem;
+    color: rgba(255,255,255,1);
+    font-weight: bold;
+    border-bottom: 0.2rem solid rgba(255,0,255);
+}
+.featured-item .title p{
+    line-height: 2rem;
+    margin-bottom: 0;
+}
+/*The even selection works pretty well
+just ensure that you put it in the selection that has got more than one adjacent sibling
+e.g here its the featured-item that had direct adjacent siblings while the title had no adjacent siblings, i.e its siblings were nested*/
+.featured-item:nth-of-type(even) .title p{
+    color: blue;
+}
+.featured-item:nth-of-type(even) .title{
+    border-bottom: 0.2rem solid rgba(0,255,0);
+}
+.featured-item .footer-banner{
+    width: 10rem;
+    height: 8rem;
+    position: absolute;
+    background-color: rgba(255,0,230);
+    bottom: -1.5rem;
+    right: -1.5rem;
+    border-radius: 0.5rem;
+}
+.carousel-div{
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    background-color: white;
+}
+@media screen and (max-width: 991px){
+    .carousel-div{
+        height: 62vh;
+    }
+    .main .welcome-div{
+        width: 100%;
+        min-height: 62vh;
+    }
+    .main .welcome-div .inner-paragraph{
+        margin-top: 1rem;
+    }
+    
+}
+#carouselExampleSlidesOnly{
+    width: 100%;
+    height: 100%;
+}
+.carousel-inner{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.carousel-inner .carousel-inner .carousel-item img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/*FAQ wrapper*/
+.faq-wrapper{
+    width: 100%;
+    min-height: 50vh;
+    background-color: transparent;
+}
+.faq-wrapper .body{
+    width: 100%;
+    height: auto;
+    background-color: transparent;
+    color: rgba(255,50,255,1);
+    font-weight: bold;
+    font-size: 3rem;
+    overflow-x: hidden;
+    padding: 0.5rem 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 3rem;
+}
+.faq-wrapper .title{
+    text-align: center;
+    color: purple;
+    font-size: 2rem;
+    font-weight: bold;
+}
+.faq-wrapper .faq-div{
+    width: 100%;
+    height: auto;
+    font-size: 1.3rem;
+    color: rgba(0,255,0,0.5);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 2rem;
+    flex-wrap: wrap;
+    border: 0.1rem solid white;
+    border-radius: 1rem;
+    box-shadow: 0.4rem 0.4rem 0.4rem rgba(0,0,0,0.5);
+}
+.faq-wrapper .faq-div .faq-text{
+    width: 30rem;
+    padding-top: 1rem;
+    font-weight: bold;
+    color: blue;
+    padding: 1rem 1rem;
+}
+
+.faq-img{
+    width: 45rem;
+    height: 30rem;
+    margin: 0;
+}
+.faq-img img{
+    width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+    border-radius: 0.3rem;
+    box-shadow: 0.2rem 0.2rem 0.2rem rgba(0,0,0,0.5);
+}
+.faq-text-title{
+    font-size: 3rem;
+    color: purple;
+}
+.faq-text-body{
+    font-size: 1rem;
+}
+
+/*for the footer */
+.footer{
+    width: 100%;
+    height: auto;
+    background-color: transparent;
+    text-align: center;
+    padding-top: 3rem;
+    padding-bottom: 1rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+.footer hr{
+    width: 100%;
+    border: 0.2rem solid white;
+}
+.footer .socials{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+}
+.footer .socials .fa{
+    background-color: white;
+    color: blue;
+    padding: 0.2rem 0.3rem;
+    width: 2.3rem;
+    height: 2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0.3rem;
+    box-shadow: 0.2rem 0.2rem 0.2rem rgba(0,0,255,0.5);
+}
+.footer .socials .fa:hover{
+    background-color: blue;
+    color: white;
+    box-shadow: 0.2rem 0.2rem 0.2rem rgba(0,0,0,0.5);
+}
+.footer .copyright{
+    width: 100%;
+    height: auto;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    gap: 0.5rem;
+}
+.footer .copyright .fa{
+    color: blue;
+    background-color: transparent;
+    border-radius: 0;
+    border: none;
+
+}
+.footer .copyright .fa:hover{
+    background-color: blue;
+    color: white;
+}
+.img{
+    load
+}
