@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="canvasTest.css">
+    <title>Canvas Test</title>
+</head>
+<body>
+    <canvas id="myCanvas" width="450" height="450"></canvas>
+    <script>
+        // get the canvas using an ID, its more efficient.
+        //let canvas = document.getElementById("myCanvas")
+        /*canvas.addEventListener("click",function(){
+            alert("the canvas just got clicked")
+        })*/
+        // work on this later I don't know why it dint work or maybe the browser is incompatible. Check my chrome version.
+        // It worked the problem was that I was calling fillStyle as a method instead of setting it as an attribbute.
+        //let ctx = canvas.getContext("2d")
+        // giving it a fill style. for the rectangle I wanna draw.
+
+        var c = document.getElementById("myCanvas");
+        var ctx = c.getContext("2d");
+        ctx.moveTo(0, 0);
+        ctx.lineTo(200, 100);
+        ctx.stroke();
+
+        var rctx = c.getContext("2d")
+        // the actual problem is that fillstyle is actually a property to be assigned and not a method.
+        rctx.fillStyle = "blue"
+        rctx.rect(10,20,250,350) // draw the rectangle.
+        rctx.fill() // to do the actual fill
+        rctx.fillRect(50,50,280,350)
+
+
+        var ctx = c.getContext("2d");
+        ctx.beginPath();
+        ctx.arc(95, 50, 40, 0, 2 * Math.PI);
+        ctx.stroke();
+
+        var grd = ctx.createRadialGradient(75, 50, 5, 90, 60, 100);
+        grd.addColorStop(0, "red");
+        grd.addColorStop(1, "white");
+
+        // Fill with gradient
+        ctx.fillStyle = grd;
+        ctx.fillRect(10, 10, 150, 80);
+    </script>
+</body>
+</html>

@@ -16,7 +16,7 @@ body{
     /*a new feature for lazy loading might not be supported by other browsers execpt chrome.*/
     content-visibility: auto;
     /*for using initial heights and prevent certain layout changes*/
-    contain-intrinsic-size:initial;
+    /*contain-intrinsic-size:initial;*/
 
 }
 .main{
@@ -47,6 +47,11 @@ body{
     z-index: 10;
     position: relative;
     /*background-image: linear-gradient(to bottom left, rgba(0,0,255,0.1),rgba(150,0,255));*/
+}
+.carousel-item img{
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
 }
 .welcome-div .inner-welcome{
     margin: auto;
@@ -335,16 +340,15 @@ e.g here its the featured-item that had direct adjacent siblings while the title
 }
 @media screen and (max-width: 991px){
     .carousel-div{
-        height: 62vh;
+        height: 100vh;
     }
     .main .welcome-div{
         width: 100%;
-        min-height: 62vh;
+        min-height: 100vh;
     }
     .main .welcome-div .inner-paragraph{
         margin-top: 1rem;
-    }
-    
+    }  
 }
 #carouselExampleSlidesOnly{
     width: 100%;
@@ -354,6 +358,11 @@ e.g here its the featured-item that had direct adjacent siblings while the title
     width: 100%;
     height: 100%;
     object-fit: cover;
+}
+.carousel-inner .carousel-inner .carousel-item:nth-of-type(odd){
+
+    display: none;
+    visibility: hidden;
 }
 .carousel-inner .carousel-inner .carousel-item img{
     width: 100%;
@@ -497,7 +506,4 @@ e.g here its the featured-item that had direct adjacent siblings while the title
 .footer .copyright .fa:hover{
     background-color: blue;
     color: white;
-}
-.img{
-    load
 }

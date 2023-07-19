@@ -34,11 +34,30 @@ body{
     box-sizing: border-box;
     overflow-x: hidden;
     display: flex;
+    flex-direction: row;
     justify-content: center;
     gap: 2rem;
 }
+.slider-header{
+    margin-left: 5rem;
+    width: 60%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    color: purple;
+}
+.right-wrapper{
+    padding: 0.5rem 2rem;
+    flex: 1 0 60%; /* trick for ensuring it covers the whole space if there's no item with it there.*/
+    /*width: 60%;*/
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding-bottom: 2rem;
+}
 .slider-wrapper{
-    width: 70%;
+    width: 100%;
     height: 42vh;
     display: flex;
     flex-direction: row;
@@ -46,6 +65,7 @@ body{
     gap: 0.5rem;
     flex-wrap: nowrap;
     overflow: hidden;
+    position: relative;
 }
 .slider{
     /*simply set the grow and shrink properties to 0 to prevent the flex from either shrinking or growing */
@@ -123,8 +143,158 @@ body{
 
 /*content on the side*/
 .blog-side{
-    width: 25%;
-    height: 40vh;
-    background-color: white;
+    width: 20%;
+    height: 80vh;
+    background-color: transparent;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+@media screen and (max-width: 991px){
+    .blog-side{
+        display: none;
+    }
+}
+.blog-side .title{
+    font-weight: bold;
+    color: blue;
+    margin: auto;
+    width: 80%;
+    padding: 0.5rem 2rem;
+    border-bottom: 0.2rem solid white;
+}
+.blog-side .recent-posts{
+    width: 100%;
+    height: 48%;
+    background-color: rgba(255,255,255,1);
     box-shadow: 0.2rem 0.2rem 0.2rem rgba(0,0,0,0.5);
+}
+.blog-side .favourite-posts{
+    width: 100%;
+    height: 45%;
+    background-color: rgba(0,0,255,0.3);
+    box-shadow: 0.2rem 0.2rem 0.2rem rgba(0,0,0,0.5);
+}
+.blog-side .favourite-posts .title{
+    color: purple;
+
+}
+
+/*Blogs wrapper*/
+.blogs-wrapper{
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
+    display: flex;
+    gap: 2rem;
+    flex-direction: column;
+}
+.author-banner{
+    display: flex;
+    width: 100%;
+    height: 4.5rem;
+    padding: 1rem 2rem;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0;
+}
+.author-banner hr{
+    width: 30%;
+    height: 0.2rem;
+    background-color: blue;
+}
+.author-banner .name-div{
+    font-weight: bold;
+    color: blue;
+    width: auto;
+    height: 2rem;
+}
+.author-banner img{
+    width: 4rem;
+    height: 4rem;
+    object-fit: cover;
+    border-radius: 50%;
+}
+.blog{
+    position: relative;
+    width: 100%;
+    height: 125vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0.5rem;
+    background-color: rgba(255,255,255,1);
+    box-shadow: 0.4rem 0.4rem 0.4rem rgba(0,0,0,0.5);
+}
+@media screen and (max-width: 991px){
+    .blog{
+        height: 168vh;
+    }
+}
+.blog .blog-body{
+    padding: 0.5rem 0rem;
+    border-bottom-left-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+    width: 96%;
+    height: 32%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0rem;
+}
+.blog-img{
+    width: 96%;
+    height: 60%;
+} 
+.blog-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+}
+.blog-title{
+    font-size: 1.2rem;
+    font-weight: bold;
+    width: auto;
+    max-height: 2.9rem;
+    overflow: hidden;
+    color: blue;
+    text-align: center;
+    line-height: 1rem;
+    padding: 0rem;
+    border-bottom: 0.2rem solid green;
+}
+.lower-div{
+    margin-top: 0;
+    padding-top: 0;
+    width: 94%;
+    height: 70%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: auto;
+}
+.blog-description{
+    color: black;
+    max-height: 60%;
+    overflow: hidden;
+}
+.continue-reading{
+    margin: auto;
+    width: 60%;
+    padding: 0.5rem 1rem;
+    border-radius: 2rem;
+    color: blue;
+    font-weight: bold;
+    background-color: white;
+}
+.continue-reading:hover{
+    background-color: blue;
+    color: white;
 }

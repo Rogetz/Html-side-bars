@@ -5,12 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width initial-scale=1.0">
     <link rel="stylesheet" href="Slider.css">
+    <link rel="stylesheet" href="../fontawesome-free-6.2.0-web\css\all.min.css">
+    <link rel="stylesheet" href="../fontawesome-free-6.2.0-web\css\brands.min.css">
+    <link rel="stylesheet" href="../fontawesome-free-6.2.0-web\css\solid.min.css">
     <title>SliderTest</title>
 </head>
 <body>
     <div class="slider">
         <div class="slides">
-            <div class="first-slide">
+            <div class="slide first-slide">
                 <img src="../pexels-pixabay-531829.jpg" alt="" class="image-div">
             </div>
             <div class="slide">
@@ -22,16 +25,20 @@
             <div class="slide">
                 <img src="../pexels-edward-eyer-1049626.jpg" alt="" class="image-div">
             </div>
-            <div class="slide">
+            <div class="slide last-slide">
                 <img src="../pexels-jer-chung-2059151.jpg" alt="" class="image-div">
             </div>
         </div>
         <div class="nav-div">
-            <input type="radio" name="navigation-radio" style="--i:1" id="radio1">
-            <input type="radio" name="navigation-radio" style="--i:2" id="radio2">
-            <input type="radio" name="navigation-radio" style="--i:3" id="radio3">
-            <input type="radio" name="navigation-radio" style="--i:4" id="radio4">
-            <input type="radio" name="navigation-radio" style="--i:5" id="radio5">    
+            <input type="radio" class="radio-class" name="navigation-radio" style="--i:1" id="radio1">
+            <input type="radio" class="radio-class" name="navigation-radio" style="--i:2" id="radio2">
+            <input type="radio" class="radio-class" name="navigation-radio" style="--i:3" id="radio3">
+            <input type="radio" class="radio-class" name="navigation-radio" style="--i:4" id="radio4">
+            <input type="radio" class="radio-class" name="navigation-radio" style="--i:5" id="radio5">    
+        </div>
+        <div class="side-navs">
+            <div class="arrow-div left-arrow"><span class="fa fa-arrow-left"></span></div>
+            <div class="arrow-div right-arrow"><span class="fa fa-arrow-right"></span></div>
         </div>
     </div>
     <script type="text/javascript" src="Slider.js"></script>

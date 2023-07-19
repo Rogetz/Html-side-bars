@@ -1,0 +1,56 @@
+<!--two ways about it I'll create a javascript powered login site. Later on I'll redesign it in recat.-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./Login.css">
+    <link rel="stylesheet" href="../fontawesome-free-6.2.0-web/css/brands.min.css">
+    <link rel="stylesheet" href="../fontawesome-free-6.2.0-web/css/solid.min.css">
+    <link rel="stylesheet" href="../fontawesome-free-6.2.0-web/css/all.min.css">
+    <title>Login | SignUp</title>
+</head>
+<body>
+    <main>
+        <div class="left-side">
+            <div class="bottom-right"></div>
+        </div>
+        <div class="right-side">
+            <form class="form-div" action="" method="post">
+                <h1 class="logo-title"><span class="first-letter">i</span>nspireMe</h1>
+                <h1 class="form-title">Log in</h1>
+                <div class="input-group">
+                    <label for="email" class="label-email">Email adress</label>
+                    <div class="input-with-icon">
+                        <i class="fa-solid fa-envelope fa-lg fa-fw" aria-hidden="true"></i>
+                        <input type="text" name="email" placeholder="email address" class="email">    
+                    </div>
+                </div>
+                <div class="input-group">
+                    <label for="password" class="label-password">Password</label>
+                    <div class="input-with-icon">
+                        <!--fa-lg sets it to a larger icon by 33% while the fa-fw sets it to a fixed width to help with alignment.
+                        despite the fixed with ensure you define the size of whatever they are sharing space with to avoid taking too much space, e.g here ensure you give the input element a width.-->
+                        <i class="fa-solid fa-key fa-lg fa-fw" aria-hidden="true"></i>   
+                        <input type="password" name="password" placeholder="password" class="password">
+                        <i class="fa-solid fa-eye lock-icon fa-lg fa-fw" aria-hidden="true"></i>   
+                    </div>
+                </div>
+                <div class="error-div"></div>
+                <div class="check-group">
+                    <input type="checkbox" name="remembe-me">
+                    <label for="remember-me">remember me</label>    
+                </div>
+                <button type="submit" class="submit-btn">Sign In</button>
+                <p class="redirect-paragraph">Don't have an account? <a href="./Signup.html">Sign Up</a></p>
+                <div class="or-div"><hr/><p class="or-text">Or</p><hr/></div>
+                <button class="third-party"><i class="fa-brands fa-google fa-lg fa-fw" aria-hidden="true"></i>Login with google</button>
+                <button class="third-party"><i class="fa-brands fa-facebook fa-lg fa-fw" aria-hidden="true"></i>Login with facebook</button>
+                <button class="third-party"><i class="fa-brands fa-github fa-lg fa-fw" aria-hidden="true"></i>Login with GitHub</button>
+            </form>
+        </div>
+    </main>
+    <script src="./Login.js"></script>
+</body>
+</html>

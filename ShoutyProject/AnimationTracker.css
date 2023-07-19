@@ -1,0 +1,28 @@
+body{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 3rem;
+    padding: 3rem 0rem;
+
+}
+.test-screen{
+    width: 65%;
+    height: 50vh;
+    background-color: blue;
+    transform-origin: 0deg;
+    transform-style: preserve-3d;
+    animation: rotateAnime 5s linear infinite;
+}
+@keyframes rotateAnime{
+    0%{
+        transform: rotateZ(0deg) rotateY(0deg) rotateX(0deg) translateZ(10rem);
+    }
+    100%{
+        transform: rotateZ(-20deg) rotateY(-20deg) rotateX(-20deg) translateZ(10rem);
+    }
+}
