@@ -8,9 +8,12 @@
     <title>Video Stream</title>
 </head>
 <body>
-
-    <!--<video id="myVideo" src=".\videos\vida yangu triller.mp4" controls></video>-->
-    <video id="myVideo" src="" controls></video>
-    <script src="videoStream.js"></script>
+    <!--I'm trying it out with the simplest style ensure the controls attribute is there-->
+    <video id="myVideo" controls></video>
+    <!--<script src="videoStream.js"></script>-->
+    <script src="node_modules/dashjs/dist/dash.all.min.js"></script>
+    <!--ensure that you always use the debugger to ensure that you know exactly what's wrong with the programm-->
+    <script src="node_modules/dashjs/dist/dash.all.debug.js"></script>
+    <script src="videoStream2.js"></script>
 </body>
 </html>

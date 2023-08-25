@@ -1,5 +1,10 @@
 {
-  "dependencies": {
-    "sass": "^1.58.3"
-  }
+  "name": "HtmlProjects",
+  "version": "1.0.0",
+  "description": "package.json for the common js files",
+  "main": "index.js",
+  "repository": "git@github.com:Rogetz/Html-side-bars.git",
+  "author": "Rogetz <ronnyogetaz@gmail.com>",
+  "license": "MIT",
+  "private": false
 }

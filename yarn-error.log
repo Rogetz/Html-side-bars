@@ -1,0 +1,36 @@
+Arguments: 
+  C:\Program Files\nodejs\node.exe C:\Users\user\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js add dashjs
+
+PATH: 
+  C:\Users\user\AppData\Local\Programs\Python\Python310\Scripts\;C:\Users\user\AppData\Local\Programs\Python\Python310\;C:\Python311\Scripts\;C:\Python311\;C:\Python310\Scripts\;C:\Python310\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Git\cmd;C:\ProgramData\chocolatey\bin;C:\Gradle\gradle-7.4.1\bin;C:\Program Files\Microsoft SQL Server\150\Tools\Binn\;C:\Windows\Microsoft.NET\Framework\v4.0.30319;C:\Program Files\dotnet\sdk\6.0.302\Roslyn\bincore;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\170\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\150\Tools\Binn\;C:\Program Files\Microsoft SQL Server\150\DTS\Binn\;C:\Program Files (x86)\Microsoft SQL Server\150\DTS\Binn\;\TomCatServer\bin;\MariaDb\bin;D:\MongoDb\bin;D:\Batch files;C:\Program Files\dotnet\sdk\6.0.308;C:\Python311\Scripts;D:\Sqlite\ActualSqlFolder\sqlite-tools-win32-x86-3410200;C:\Users\user\AppData\Roaming\nvm;C:\Program Files\nodejs;D:\ffmpeg\ffmpeg-4.1-win64-static\bin;D:\Mongo\mongosh-1.8.0-win32-x64\bin;C:\Ruby31-x64\bin;C:\Program Files\MySQL\MySQL Shell 8.0\bin\;C:\Users\user\AppData\Local\Microsoft\WindowsApps;C:\Program Files\JetBrains\PyCharm Community Edition 2021.2.1\bin;;C:\Users\user\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\user\AppData\Roaming\npm;D:\INTELLIJ\IntelliJ IDEA Community Edition 2021.3.3\bin;;C:\Program Files\JetBrains\RubyMine 2022.1\bin;;C:\tools\dart-sdk\bin;C:\Users\user\AppData\Roaming\Pub\Cache\bin;C:\Program Files\Azure Data Studio\bin;C:\Users\user\AppData\Roaming\nvm;C:\Program Files\nodejs
+
+Yarn version: 
+  1.22.19
+
+Node version: 
+  18.16.0
+
+Platform: 
+  win32 x64
+
+Trace: 
+  Error: getaddrinfo ENOTFOUND registry.yarnpkg.com
+      at GetAddrInfoReqWrap.onlookup [as oncomplete] (node:dns:107:26)
+
+npm manifest: 
+  {
+    "name": "HtmlProjects",
+    "version": "1.0.0",
+    "description": "package.json for the common js files",
+    "main": "index.js",
+    "repository": "git@github.com:Rogetz/Html-side-bars.git",
+    "author": "Rogetz <ronnyogetaz@gmail.com>",
+    "license": "MIT",
+    "private": false
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile

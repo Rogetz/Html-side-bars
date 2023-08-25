@@ -17,14 +17,17 @@ if(window.MediaSource){
     
     mediaSource.addEventListener("sourceopen",function(e){
         console.log("source opened")
+        console.log(`are the codecs supported: ${MediaSource.isTypeSupported('video/mp4;codecs="avc1.4d401e, mp4a.40.2"')}`)
         //do a URL cleanup first. since the connection is already created.
-        URL.revokeObjectURL(urlObject)
+        //URL.revokeObjectURL(urlObject)
         let mediaSource = e.target
         // just learnt that you can use the same codecs for different container formats, e.g here I used the codecs from the webm container format.
-        let sourcebuffer = mediaSource.addSourceBuffer('video/mp4;codecs="opus,vp09.00.10.08"')
-        fetch("./videos/y2mate.com - Command Line arguments in Python using the sys module_1080p.mp4").then(function(response){
+        const sourcebuffer = mediaSource.addSourceBuffer('video/mp4;codecs="avc1.4d401e, mp4a.40.2"')
+        fetch("\\dashFiles\\out.mpd").then(function(response){
             console.log("fetching begins")
-            return response.arrayBuffer()            
+            console.log(`response received: ${JSON.stringify(response)}`)
+            //console.log(`the json part of the response: ${JSON.stringify(response.json())}`)
+            return response.arrayBuffer()          
         }).then(function(arrayBuffer){
             //testing for the updateend
             sourcebuffer.addEventListener("updateend",function(e){
@@ -39,10 +42,19 @@ if(window.MediaSource){
                     console.log("end of stream not called")
                 }
             })
+            // Added this later
+            if(mediaSource.readyState >= 3){
+                console.log("stream ready to be played")
+            }
 
             console.log(arrayBuffer.byteLength)
             console.log("appending is happening")
             sourcebuffer.appendBuffer(arrayBuffer)
+            console.log(`type of the source buffer is: ${typeof(sourcebuffer)}`)
+            /*if(sourcebuffer.updating){
+                console.log("source buffer updating")
+            }*/        
+
         }).catch(function(err){
             console.log("an error occured.")
             console.log("The error:-")
